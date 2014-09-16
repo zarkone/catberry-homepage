@@ -1,0 +1,66 @@
+{
+	"name": "catberry-homepage",
+	"version": "0.0.1",
+	"description": "Catberry's official site. Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js",
+	"homepage": "https://github.com/catberry/catberry-homepage",
+	"keywords": [
+		"stream", "web", "isomorphic", "framework", "middleware", "connect",
+		"dust", "module", "express"
+	],
+	"bugs": {
+		"url": "https://github.com/catberry/catberry-homepage/issues",
+		"email": "julia.rechkunova@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/catberry/catberry-homepage.git"
+	},
+	"contributors": [
+		{
+			"name": "Denis Rechkunov",
+			"email": "denis.rechkunov@gmail.com"
+		},
+		{
+			"name": "Julia Rechkunova",
+			"email": "julia.rechkunova@gmail.com"
+		}
+	],
+	"main": "./server.js",
+	"browser": {
+		"./configs/environment.json": "./configs/browser.json"
+	},
+	"dependencies": {
+		"catberry": "git://github.com/catberry/catberry.git#develop",
+		"catberry-l10n": "^2.0.0",
+		"catberry-lazy-loader": "^2.0.0",
+		"connect": "~2.19.5",
+		"event-stream": "~3.1.5",
+		"gulp": "~3.8.5",
+		"gulp-concat": "~2.2.0",
+		"gulp-imagemin": "~0.6.0",
+		"gulp-kss": "~0.0.2",
+		"gulp-less": "~1.2.3",
+		"gulp-minify-css": "~0.3.4",
+		"gulp-raster": "~0.0.4",
+		"gulp-rename": "~1.2.0",
+		"gulp-rimraf": "~0.1.0",
+		"gulp-svgmin": "~0.4.6",
+		"gulp-uglify": "~0.3.0"
+	},
+	"devDependencies": {
+		"istanbul-harmony": "~0.3.0",
+		"jsdom": "~0.10.6",
+		"mocha": "^1.20.0",
+		"jscs": "~1.4.0",
+		"jshint": "^2.5.0"
+	},
+	"engines": {
+		"node": "^0.10.26"
+	},
+	"scripts": {
+		"start": "npm run release",
+		"release": "make release && node ./server.js release",
+		"debug": "gulp watch & node ./build.js & node ./server.js",
+		"test": "make"
+	}
+}

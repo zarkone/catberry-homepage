@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<title>{@l10n key="TITLE" /}</title>
+<meta http-equiv="x-ua-compatible" content="edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{@l10n key="DESCRIPTION" /}">
+
+<link rel="stylesheet" href="/style.css"/>
+
+<script src="/l10n.js"></script>
+<script src="/bundle.js"></script>

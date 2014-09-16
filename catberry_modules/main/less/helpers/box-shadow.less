@@ -1,0 +1,13 @@
+.mixin-box-shadow (@offset-x: 0, @offset-y: 0, @size: 8px, @opacity: 0.6, @spread: 0) {
+	@value: @offset-x @offset-y @size @spread rgba(0, 0, 0, @opacity);
+	-webkit-box-shadow: @value;
+	-moz-box-shadow: @value;
+	box-shadow: @value;
+}
+
+.mixin-box-shadow--inset (@offset-x: 0, @offset-y: 0, @size: 8px, @opacity: 0.6, @spread: 0) {
+	@value: @offset-x @offset-y @size @spread rgba(0, 0, 0, @opacity) inset;
+	-webkit-box-shadow: @value;
+	-moz-box-shadow: @value;
+	box-shadow: @value;
+}

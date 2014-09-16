@@ -1,0 +1,12 @@
+.mixin-custom-font(@location, @name, @family, @weight: normal, @style: normal) {
+	@font-face {
+		font-family: @family;
+		src: url('@{location}/@{name}.eot');
+		src: url('@{location}/@{name}.eot?#iefix') format('embedded-opentype'),
+		url('@{location}/@{name}.woff') format('woff'),
+		url('@{location}/@{name}.ttf') format('truetype'),
+		url('@{location}/@{name}.svg#icon') format('svg');
+		font-weight: @weight;
+		font-style: @style;
+	}
+}

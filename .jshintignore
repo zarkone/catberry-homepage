@@ -1,0 +1,6 @@
+node_modules
+coverage
+public
+catberry_modules/*/assets
+catberry_modules/*/placeholders/compiled
+styleguide/template

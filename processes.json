@@ -1,0 +1,15 @@
+{
+	"apps": [
+		{
+			"name": "catberry-homepage",
+			"script": "server.js",
+			"args": "['release']",
+			"ignoreWatch": ["node_modules"],
+			"watch": "true",
+			"instances": "max",
+			"out_file": "logs/output.log",
+			"error_file": "logs/error.log",
+			"pid_file": "worker.pid"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+@import "../items/color";
+@import "../helpers/custom-font";
+
+.mixin-custom-font('/lib/pt-sans/', 'PTS55F_W', 'PT Sans');
+.mixin-custom-font('/lib/pt-sans', 'PTS75F_W', 'PT Sans', bold);
+
+@FONT_DEFAULT: 'Arial', sans-serif;
+@FONT_PT_SANS: 'PT Sans', @FONT_DEFAULT;
+
+@font-default-family: @FONT_PT_SANS;
+@font-default-size: 1em;
+@font-default-color: @color-text-default;
+
+.font () {
+	font: @font-default-size @font-default-family;
+	color: @font-default-color;
+}
