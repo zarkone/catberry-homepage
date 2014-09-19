@@ -1,0 +1,23 @@
+@import "../items/color";
+@import "../items/list";
+
+.cb-navigation {
+	&:extend(.cb-list all);
+}
+
+.cb-navigation__item {
+	margin-left: 2rem;
+
+	& a,
+	& a:visited,
+	& a:active,
+	& a:hover {
+		opacity: 0.9;
+		color: @COLOR_BACKGROUND;
+	}
+
+	& a:active,
+	& a:hover {
+		opacity: 1;
+	}
+}

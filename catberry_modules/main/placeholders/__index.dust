@@ -2,7 +2,11 @@
 <html>
 <head lang="{locale}" id="main_head">
 </head>
-<body>
-Hello!
+<body class="cb-body">
+{>"main__header"/}
+<div id="main_major"></div>
+<section class="cb-content">
+	Hello!
+</section>
 </body>
 </html>

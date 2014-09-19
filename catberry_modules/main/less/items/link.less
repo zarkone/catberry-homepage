@@ -1,3 +1,16 @@
 @import "../items/color";
 
+a,
+.cb-link {
+	color: @COLOR_LINK;
+	text-decoration: none;
 
+	&:visited {
+		color: @COLOR_LINK;
+	}
+
+	&:active,
+	&:hover {
+		color: @COLOR_LINK_ACTIVE;
+	}
+}

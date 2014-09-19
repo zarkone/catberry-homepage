@@ -15,7 +15,9 @@ var isRelease = false,
 	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
 	kss = require('gulp-kss'),
-	less = require('gulp-less');
+	less = require('gulp-less'),
+	browserSync = require('browser-sync'),
+	config = require('./configs/basic.json');
 
 var STYLE_GUIDE_OVERVIEW = 'overview.md',
 	STYLE_GUIDE_TEMPLATE = 'template',
@@ -105,6 +107,11 @@ gulp.task(TASKS.REGISTER_WATCH, [TASKS.BUILD],
 		if (isRelease) {
 			return;
 		}
+
+		browserSync({
+			proxy: config.application.host
+		});
+
 		registerWatch();
 	});
 
@@ -208,6 +215,8 @@ gulp.task(TASKS.PUBLISH_JOINED_STYLES, [TASKS.PROCESS_STYLES],
 
 		if (isRelease) {
 			stream = stream.pipe(minifyCSS());
+		} else {
+			stream = stream.pipe(browserSync.reload({stream:true}));
 		}
 
 		return stream.pipe(gulp.dest(DIRECTORIES.DESTINATION));

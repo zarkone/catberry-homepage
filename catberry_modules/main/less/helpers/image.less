@@ -23,6 +23,12 @@
 	height: @height;
 }
 
+.mixin-background (@image, @module: @IMAGES_BASE_MODULE) {
+	background-image: url('@{IMAGES_CDN}@{module}@{IMAGES_DIRECTORY}@{image}');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 .mixin-svg-background-image (@image, @width, @height, @module: @IMAGES_BASE_MODULE) {
 	background: url('@{IMAGES_CDN}@{module}@{IMAGES_DIRECTORY}@{image}.png') no-repeat;
 	background-image: none, url('@{IMAGES_CDN}@{module}@{IMAGES_DIRECTORY}@{image}.svg');

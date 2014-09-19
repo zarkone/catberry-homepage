@@ -1,0 +1,8 @@
+<header class="cb-header">
+	<div class="cb-content">
+		<div class="cb-header__title">Catberry.js</div>
+		<div class="cb-header__navigation">
+			<nav id="sections_navigation"></nav>
+		</div>
+	</div>
+</header>

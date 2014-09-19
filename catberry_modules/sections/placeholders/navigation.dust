@@ -1,0 +1,6 @@
+<ul class="cb-navigation">
+	<li class="cb-navigation__item"><a href="/">Overview</a></li>
+	<li class="cb-navigation__item"><a href="/documentation">Documentation</a></li>
+	<li class="cb-navigation__item"><a href="/packages">Packages</a></li>
+	<li class="cb-navigation__item"><a href="/releases">Release notes</a></li>
+</ul>

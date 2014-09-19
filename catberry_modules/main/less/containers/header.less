@@ -1,0 +1,22 @@
+@import "../items/color";
+@import "../items/typography";
+@import "../helpers/fluid";
+
+.cb-header {
+	color: @COLOR_BACKGROUND;
+	background: @COLOR_HEADER;
+	box-shadow: 0 2px 2px 0 @COLOR_SHADOW, 0 1px 0 0 @COLOR_SHADOW;
+
+	.mixin-fluid();
+
+	&__title {
+		font-weight: bold;
+		font-size: @FONT_SIZE_MEDIUM;
+		.mixin-fluid-item(30%);
+	}
+
+	&__navigation {
+		text-align: right;
+		.mixin-fluid-item(70%);
+	}
+}
