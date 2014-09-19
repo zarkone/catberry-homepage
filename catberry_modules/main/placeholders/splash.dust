@@ -1,0 +1,16 @@
+<section class="cb-splash">
+	<div class="cb-splash__content">
+		<div class="cb-splash__description">
+			<h1>Catberry framework</h1>
+			<h2>for fast and modular isomorphic&nbsp;web&nbsp;applications</h2>
+			<div class="ui secondary segment">
+				<code>
+					<div>npm install catberry</div>
+					<div>npm install -g catberry-cli</div>
+					<div>catberry init empty</div>
+				</code>
+			</div>
+		</div>
+		<div class="cb-splash__logo"></div>
+	</div>
+</section>

@@ -1,21 +1,24 @@
 @import "../helpers/fluid";
 @import "../helpers/image";
+@import "../helpers/center-block";
 @import "../items/color";
+@import "../base/variables";
 
-.cb-major {
+.cb-splash {
 	box-shadow: 0 2px 2px 0 @COLOR_SHADOW, 0 1px 0 0 @COLOR_SHADOW;
 
 	&__content {
-		height: 20rem;
-		padding: 0 3rem;
+		height: 25rem;
+		padding: 2rem 3rem;
 
-		.mixin-fluid();
+		.mixin-fluid(@BODY_CONTENT_WIDTH);
+		.mixin-center-block();
 	}
 
 	&__logo {
 		height: 100%;
 		padding: 2rem 0;
-		.mixin-fluid-item(40%);
+		.mixin-fluid-item(50%);
 		.mixin-background('catberry.png', 'main');
 		background-position: top right;
 	}
@@ -23,6 +26,6 @@
 	&__description {
 		height: 100%;
 		padding: 2rem 0;
-		.mixin-fluid-item(60%);
+		.mixin-fluid-item(50%);
 	}
 }

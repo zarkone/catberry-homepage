@@ -11,22 +11,18 @@ var isRelease = false,
 	clean = require('gulp-rimraf'),
 	es = require('event-stream'),
 	fs = require('fs'),
-	raster = require('gulp-raster'),
-	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
-	kss = require('gulp-kss'),
 	less = require('gulp-less'),
 	browserSync = require('browser-sync'),
 	config = require('./configs/basic.json');
 
-var STYLE_GUIDE_OVERVIEW = 'overview.md',
-	STYLE_GUIDE_TEMPLATE = 'template',
-	LESS_IMPORT_FORMAT = '@import "%s";',
+var LESS_IMPORT_FORMAT = '@import "%s";',
 	MAIN_MODULE = 'main',
 	STYLE_FILENAME = 'style.css',
 	STYLE_LESS_FILE = 'style.less';
 
 var DIRECTORY_NAMES = {
+	LIB: 'lib',
 	LESS: 'less',
 	TEMPORARY: '_tmp',
 	CATBERRY_MODULES: 'catberry_modules',
@@ -34,7 +30,7 @@ var DIRECTORY_NAMES = {
 	PLACEHOLDERS: 'placeholders',
 	PUBLIC: 'public',
 	ASSETS: 'assets',
-	STYLEGUIDE: 'styleguide',
+	ICONS: 'icons',
 	CSS: 'css'
 };
 
@@ -45,9 +41,7 @@ var DIRECTORIES = {
 	COMPILED_LESS: path.join(process.cwd(), DIRECTORY_NAMES.CATBERRY_MODULES,
 		MAIN_MODULE, DIRECTORY_NAMES.ASSETS, DIRECTORY_NAMES.CSS,
 		DIRECTORY_NAMES.COMPILED),
-	STYLE_GUIDE_DESTINATION: path.join(process.cwd(), DIRECTORY_NAMES.PUBLIC,
-		DIRECTORY_NAMES.STYLEGUIDE),
-	STYLE_GUIDE_SOURCE: path.join(process.cwd(), DIRECTORY_NAMES.STYLEGUIDE)
+	GLOBAL_ASSETS_SOURCE: path.join(process.cwd(), DIRECTORY_NAMES.ASSETS)
 };
 
 var IN_MODULE_GLOBS = {
@@ -59,18 +53,20 @@ var IN_MODULE_GLOBS = {
 	IMAGES_JPG: path.join('**', '*.jpg'),
 	IMAGES_GIF: path.join('**', '*.gif'),
 	OTHER_ASSETS: path.join('**', '!(*.css|*.js|*.png|*.jpg|*.gif)'),
-	ALL: '*'
+	ALL: '*',
+	ALL_RECURSIVE: path.join('**', '*')
 };
 
 var TASKS = {
+	BUILD_GLOBAL_ASSETS: 'build-global-assets',
+	BUILD_GLOBAL_ASSETS_SVG: 'build-global-assets-svg',
 	CLEAN_PUBLIC: 'clean-public',
 	CLEAN_LESS: 'clean-less',
 	CLEAN_TEMPORARY: 'clean-tmp',
-	CLEAN_STYLEGUIDE: 'clean-styleguide',
 	REMOVE_TEMPORARY: 'remove-tmp',
 	BUILD: 'build',
-	RELEASE: 'release',
 	CLEAN: 'clean',
+	RELEASE: 'release',
 	COMPILE_LESS: 'less',
 	SVG_TO_PNG: 'svg2png',
 	PROCESS_STYLES: 'process-styles',
@@ -78,7 +74,6 @@ var TASKS = {
 	PUBLISH_IMAGES: 'publish-images',
 	PUBLISH_SCRIPTS: 'publish-scripts',
 	PUBLISH_OTHER_ASSETS: 'publish-other-assets',
-	STYLEGUIDE: 'styleguide',
 	REGISTER_WATCH: 'watch'
 };
 
@@ -98,8 +93,7 @@ var TASKS = {
 gulp.task(TASKS.CLEAN, [
 	TASKS.CLEAN_PUBLIC,
 	TASKS.CLEAN_TEMPORARY,
-	TASKS.CLEAN_LESS,
-	TASKS.CLEAN_STYLEGUIDE
+	TASKS.CLEAN_LESS
 ]);
 
 gulp.task(TASKS.REGISTER_WATCH, [TASKS.BUILD],
@@ -116,7 +110,8 @@ gulp.task(TASKS.REGISTER_WATCH, [TASKS.BUILD],
 	});
 
 gulp.task(TASKS.BUILD, [
-	TASKS.SVG_TO_PNG,
+	TASKS.BUILD_GLOBAL_ASSETS,
+	TASKS.BUILD_GLOBAL_ASSETS_SVG,
 	TASKS.PUBLISH_JOINED_STYLES,
 	TASKS.PUBLISH_SCRIPTS,
 	TASKS.PUBLISH_IMAGES,
@@ -129,28 +124,32 @@ gulp.task(TASKS.RELEASE, function () {
 	gulp.start(TASKS.BUILD);
 });
 
-gulp.task(TASKS.STYLEGUIDE, [TASKS.COMPILE_LESS], function () {
-	return gulp.src(getLessFileWithAllStyles())
-		.pipe(less())
-		.pipe(kss({
-			overview: path.join(DIRECTORIES.STYLE_GUIDE_SOURCE,
-				STYLE_GUIDE_OVERVIEW),
-			templateDirectory: path.join(DIRECTORIES.STYLE_GUIDE_SOURCE,
-				STYLE_GUIDE_TEMPLATE)
-		}))
-		.pipe(gulp.dest(DIRECTORIES.STYLE_GUIDE_DESTINATION));
+gulp.task(TASKS.BUILD_GLOBAL_ASSETS_SVG, [TASKS.BUILD_GLOBAL_ASSETS],
+	function () {
+		var libDestinationIcons = path.join(
+			DIRECTORIES.DESTINATION,
+			DIRECTORY_NAMES.LIB,
+			DIRECTORY_NAMES.ICONS
+		);
+		return gulp.src(path.join(libDestinationIcons, IN_MODULE_GLOBS.SVG))
+			.pipe(svgmin([{
+				convertPathData: false
+			}]))
+			.pipe(gulp.dest(libDestinationIcons));
+	});
+
+gulp.task(TASKS.BUILD_GLOBAL_ASSETS, function () {
+	return gulp.src(path.join(
+		DIRECTORIES.GLOBAL_ASSETS_SOURCE,
+		IN_MODULE_GLOBS.ALL_RECURSIVE
+	))
+		.pipe(gulp.dest(DIRECTORIES.DESTINATION));
 });
 
 // clean public folder
 gulp.task(TASKS.CLEAN_PUBLIC,
 	function () {
 		return getCleanTaskForPath(DIRECTORIES.DESTINATION);
-	});
-
-// clean styleguide
-gulp.task(TASKS.CLEAN_STYLEGUIDE,
-	function () {
-		return getCleanTaskForPath(DIRECTORIES.STYLE_GUIDE_DESTINATION);
 	});
 
 // clean all compiled LESS files
@@ -175,16 +174,6 @@ gulp.task(TASKS.COMPILE_LESS, function () {
 	return gulp.src(getLessFileWithAllStyles())
 		.pipe(less())
 		.pipe(gulp.dest(DIRECTORIES.COMPILED_LESS));
-});
-
-gulp.task(TASKS.SVG_TO_PNG, [TASKS.PUBLISH_OTHER_ASSETS], function () {
-	return gulp.src(path.join(DIRECTORIES.DESTINATION, IN_MODULE_GLOBS.SVG))
-		.pipe(svgmin())
-		.pipe(gulp.dest(DIRECTORIES.DESTINATION))
-		.pipe(raster())
-		.pipe(rename({extname: '.png'}))
-		.pipe(imagemin())
-		.pipe(gulp.dest(DIRECTORIES.DESTINATION));
 });
 
 // process styles when temporary directory is clean
@@ -223,7 +212,7 @@ gulp.task(TASKS.PUBLISH_JOINED_STYLES, [TASKS.PROCESS_STYLES],
 	});
 
 // public all images when public directory is clean
-gulp.task(TASKS.PUBLISH_IMAGES, [TASKS.SVG_TO_PNG], function () {
+gulp.task(TASKS.PUBLISH_IMAGES, function () {
 	var tasks = [],
 		sourcePathAssets = path.join(
 			DIRECTORIES.CATBERRY_MODULES,
@@ -334,6 +323,14 @@ function registerWatch() {
 		IN_MODULE_GLOBS.OTHER_ASSETS
 	);
 	gulp.watch(otherAssetsPath, [TASKS.PUBLISH_OTHER_ASSETS]);
+
+	var globalAssets = path.join(
+		DIRECTORIES.GLOBAL_ASSETS_SOURCE,
+		IN_MODULE_GLOBS.ALL_RECURSIVE
+	);
+	gulp.watch(globalAssets,
+		[TASKS.BUILD_GLOBAL_ASSETS, TASKS.BUILD_GLOBAL_ASSETS_SVG]);
+
 }
 
 /**
