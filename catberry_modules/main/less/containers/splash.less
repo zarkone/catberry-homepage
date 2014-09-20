@@ -2,14 +2,16 @@
 @import "../helpers/image";
 @import "../helpers/center-block";
 @import "../items/color";
+@import "../base/palette";
 @import "../base/variables";
 
 .cb-splash {
-	box-shadow: 0 2px 2px 0 @COLOR_SHADOW, 0 1px 0 0 @COLOR_SHADOW;
+	box-shadow: 0 1px 0 0 @COLOR_SHADOW;
+	background: @PALETTE_COLOR_GREY_2;
 
 	&__content {
 		height: 25rem;
-		padding: 2rem 3rem;
+		padding: 2rem;
 
 		.mixin-fluid(@BODY_CONTENT_WIDTH);
 		.mixin-center-block();
@@ -17,15 +19,13 @@
 
 	&__logo {
 		height: 100%;
-		padding: 2rem 0;
-		.mixin-fluid-item(50%);
+		.mixin-fluid-item(40%);
 		.mixin-background('catberry.png', 'main');
-		background-position: top right;
+		background-position: center right;
 	}
 
 	&__description {
 		height: 100%;
-		padding: 2rem 0;
-		.mixin-fluid-item(50%);
+		.mixin-fluid-item(60%);
 	}
 }

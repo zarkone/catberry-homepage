@@ -3,12 +3,26 @@
 		<div class="cb-splash__description">
 			<h1>Catberry framework</h1>
 			<h2>for fast and modular isomorphic&nbsp;web&nbsp;applications</h2>
-			<div class="ui secondary segment">
+			<p>
 				<code>
-					<div>npm install -g catberry-cli</div>
-					<div>catberry init empty</div>
+					npm install -g catberry-cli<br>
+					catberry init empty
 				</code>
-			</div>
+			</p>
+			<p>
+				<a href="https://travis-ci.org/catberry/catberry" target="_blank">
+					<img src="https://travis-ci.org/catberry/catberry.png?branch=master" alt="Coverage Status"/>
+				</a>
+				{~s}
+				<a href="https://coveralls.io/repos/catberry/catberry?branch=master" target="_blank">
+					<img src="https://coveralls.io/repos/catberry/catberry/badge.png?branch=master" alt="Coverage Status"/>
+				</a>
+			</p>
+			<p>
+				<a href="https://nodei.co/npm/catberry/" target="_blank">
+					<img src="https://nodei.co/npm/catberry.png?downloads=true&downloadRank=true&stars=true" alt="NPM"/>
+				</a>
+			</p>
 		</div>
 		<div class="cb-splash__logo"></div>
 	</div>

@@ -24,8 +24,8 @@ module.exports = [
 	,
 	{
 		// /get-started
-		expression: '/get-started',
-		map: getPageMap('get-started')
+		expression: '/getting-started',
+		map: getPageMap('getting-started')
 	},
 	{
 		// /documentation

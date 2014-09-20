@@ -6,5 +6,9 @@
 		<div class="cb-header__navigation">
 			<nav id="sections_navigation"></nav>
 		</div>
+		<div class="cb-header__github">
+			<iframe src="http://ghbtns.com/github-btn.html?user=catberry&repo=catberry&type=watch&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+		</div>
 	</div>
 </header>

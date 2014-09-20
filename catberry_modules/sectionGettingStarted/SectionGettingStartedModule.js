@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = SectionGetStartedModule;
+module.exports = SectionGettingStartedModule;
 
 var util = require('util'),
 	BaseModule = require('../../lib/BaseModule');
 
-util.inherits(SectionGetStartedModule, BaseModule);
+util.inherits(SectionGettingStartedModule, BaseModule);
 
 /**
  * Creates new instance of section get started.
@@ -14,6 +14,6 @@ util.inherits(SectionGetStartedModule, BaseModule);
  * @constructor
  * @extends BaseModule
  */
-function SectionGetStartedModule($serviceLocator) {
+function SectionGettingStartedModule($serviceLocator) {
 	BaseModule.call(this, $serviceLocator);
 }

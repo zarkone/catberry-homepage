@@ -1,0 +1,54 @@
+<section class="cb-features">
+	<div class="cb-content">
+		<div class="ui three column grid">
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular code icon"></i>
+					<div class="content">Isomorphic
+						<div class="sub header">Catberry builds browser script bundle with browserify and re-uses your node.js modules in browser</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular magic icon"></i>
+					<div class="content">SPA
+						<div class="sub header">Automatically creates Single Page Application using browser History API</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular url icon"></i>
+					<div class="content">SEO
+						<div class="sub header">Back-end renders identical page for search engines and shared links</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular rocket icon"></i>
+					<div class="content">Blazing fast
+						<div class="sub header">Super fast rendering engine using node.js streams without in-memory template rendering</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular lab icon"></i>
+					<div class="content">Easy to extend
+						<div class="sub header">All framework is built using Service Locator pattern, Dependency Injection and Promises</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui center aligned icon header">
+					<i class="circular shield icon"></i>
+					<div class="content">Ready to production
+						<div class="sub header">Well tested and already used in several public deployed applications</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

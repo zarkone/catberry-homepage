@@ -7,8 +7,8 @@
 		<div class="loading--show-animation" id="sectionOverview_page"
 			 data-scroll-top="true"></div>
 	{/eq}
-	{@eq value="get-started"}
-		<div class="loading--show-animation" id="sectionGetStarted_page"
+	{@eq value="getting-started"}
+		<div class="loading--show-animation" id="sectionGettingStarted_page"
 			 data-scroll-top="true"></div>
 	{/eq}
 	{@eq value="documentation"}
