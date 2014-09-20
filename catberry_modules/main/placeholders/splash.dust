@@ -5,7 +5,6 @@
 			<h2>for fast and modular isomorphic&nbsp;web&nbsp;applications</h2>
 			<div class="ui secondary segment">
 				<code>
-					<div>npm install catberry</div>
 					<div>npm install -g catberry-cli</div>
 					<div>catberry init empty</div>
 				</code>
