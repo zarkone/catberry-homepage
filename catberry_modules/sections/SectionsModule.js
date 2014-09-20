@@ -19,9 +19,11 @@ function SectionsModule($serviceLocator) {
 }
 
 /**
- * Renders navigation placeholder.
+ * Renders pages placeholder.
  * @returns {Object} Data context.
  */
-SectionsModule.prototype.renderNavigation = function () {
-	return this.createDataContext();
+SectionsModule.prototype.renderPages = function () {
+	var dc = this.createDataContext();
+	dc.pageType = this.$context.state.pageType;
+	return dc;
 };

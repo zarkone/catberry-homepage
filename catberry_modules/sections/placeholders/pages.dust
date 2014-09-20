@@ -1,0 +1,23 @@
+{@select key="{pageType}"}
+	{@eq value="main"}
+		<div class="loading--show-animation" id="main_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@eq value="overview"}
+		<div class="loading--show-animation" id="sectionOverview_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@eq value="get-started"}
+		<div class="loading--show-animation" id="sectionGetStarted_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@eq value="documentation"}
+		<div class="loading--show-animation" id="sectionDocumentation_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@eq value="packages"}
+		<div class="loading--show-animation" id="sectionPackages_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@default}{/default}
+{/select}

@@ -6,9 +6,7 @@
 <body class="cb-body">
 {>"main__header"/}
 <div id="main_splash"></div>
-<section class="cb-content">
-	Hello!
-</section>
+<div id="sections_pages"></div>
 <script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
 <div id="analytics_tracking-code"></div>
 </body>
