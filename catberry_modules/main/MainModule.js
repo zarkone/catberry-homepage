@@ -11,7 +11,6 @@ util.inherits(MainModule, BaseModule);
  * Creates new instance of main module.
  * @param {ServiceLocator} $serviceLocator Service locator to resolve
  * dependencies.
- * @param {Object} application Object with current application parameters.
  * @constructor
  * @extends BaseModule
  */

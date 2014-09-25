@@ -2,7 +2,7 @@
 SRC = lib/**.js \
 	catberry_modules/**.js
 
-TESTS = test/lib/*
+TESTS = test/*
 
 npm-test: lint test
 

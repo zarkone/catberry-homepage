@@ -205,7 +205,9 @@ gulp.task(TASKS.PUBLISH_JOINED_STYLES, [TASKS.PROCESS_STYLES],
 		if (isRelease) {
 			stream = stream.pipe(minifyCSS());
 		} else {
-			stream = stream.pipe(browserSync.reload({stream:true}));
+			stream = stream.pipe(browserSync.reload({
+				stream: true
+			}));
 		}
 
 		return stream.pipe(gulp.dest(DIRECTORIES.DESTINATION));

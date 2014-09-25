@@ -24,12 +24,20 @@ function AnalyticsModule($serviceLocator, googleAnalytics) {
 	}
 
 	if (this.$context.isBrowser) {
+		this._window = this.locator.resolve('window');
 		this.trackEvents();
 		this.trackFormSubmitting();
 		this.trackPages();
 		this.trackErrors();
 	}
 }
+
+/**
+ * Object "window".
+ * @type {Object}
+ * @private
+ */
+AnalyticsModule.prototype._window = null;
 
 /**
  * Google Analytics config.
@@ -54,7 +62,7 @@ AnalyticsModule.prototype.renderTrackingCode = function () {
  * Tracks events.
  */
 AnalyticsModule.prototype.trackEvents = function () {
-	if (typeof(ga) !== 'function') {
+	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
 	// track events
@@ -62,10 +70,12 @@ AnalyticsModule.prototype.trackEvents = function () {
 		if (!args.isStarted) {
 			return;
 		}
-		ga('send', 'event',
+		this._window.ga(
+			'send',
+			'event',
 			'event',
 			args.eventName,
-				window.location.hash || 'empty hash'
+			this._window.location.hash || 'empty hash'
 		);
 	});
 };
@@ -74,14 +84,17 @@ AnalyticsModule.prototype.trackEvents = function () {
  * Tracks form submitting.
  */
 AnalyticsModule.prototype.trackFormSubmitting = function () {
-	if (typeof(ga) !== 'function') {
+	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
 	// track form submitting
 	this.$context.on('formSubmitted', function (args) {
-		ga('send', 'event', 'form',
-				'module: ' + args.moduleName + ', form: ' + args.name,
-				window.location.hash || 'empty hash'
+		this._window.ga(
+			'send',
+			'event',
+			'form',
+			'module: ' + args.moduleName + ', form: ' + args.name,
+			this._window.location.hash || 'empty hash'
 		);
 	});
 };
@@ -90,12 +103,12 @@ AnalyticsModule.prototype.trackFormSubmitting = function () {
  * Tracks pages.
  */
 AnalyticsModule.prototype.trackPages = function () {
-	if (typeof(ga) !== 'function') {
+	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
 	// track pages
 	this.$context.on('pageRendered', function (args) {
-		ga('send', 'pageview', args.urlPath);
+		this._window.ga('send', 'pageview', args.urlPath);
 	});
 };
 
@@ -103,11 +116,11 @@ AnalyticsModule.prototype.trackPages = function () {
  * Tracks errors.
  */
 AnalyticsModule.prototype.trackErrors = function () {
-	if (typeof(ga) !== 'function') {
+	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
 	// track errors
 	this.$context.on('error', function (error) {
-		ga('send', 'event', 'error', error ? error.stack : '');
+		this._window.ga('send', 'event', 'error', error ? error.stack : '');
 	});
 };

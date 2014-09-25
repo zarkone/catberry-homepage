@@ -20,8 +20,7 @@ module.exports = [
 		// /overview
 		expression: '/overview',
 		map: getPageMap('overview')
-	}
-	,
+	},
 	{
 		// /get-started
 		expression: '/getting-started',
