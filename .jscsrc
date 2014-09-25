@@ -36,9 +36,11 @@
 	},
 
 	"excludeFiles": [
-	    "./**/node_modules/**", "./node_modules/**",
+	    "./**/node_modules/**",
+		"./node_modules/**",
 	    "./coverage/**",
 	    "./catberry_modules/**/assets/lib",
-	    "./public/**", "./styleguide/template"
+	    "./public/**",
+		"./assets/**"
     ]
 }

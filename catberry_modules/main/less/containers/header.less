@@ -1,11 +1,19 @@
+@import "../base/z-indexes";
 @import "../items/color";
 @import "../items/typography";
 @import "../helpers/fluid";
 
 .cb-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
 	color: @COLOR_BACKGROUND;
 	background: @COLOR_HEADER;
 	box-shadow: 0 2px 2px 0 @COLOR_SHADOW, 0 1px 0 0 @COLOR_SHADOW;
+
+	z-index: @z-index-header;
 
 	.mixin-fluid();
 
