@@ -1,0 +1,10 @@
+<footer class="cb-footer">
+	<div class="cb-content">
+		<a href="https://twitter.com/catberryjs" target="_blank">
+			<i class="twitter big black icon"></i>
+		</a>
+		<a href="https://github.com/catberry/catberry" target="_blank">
+			<i class="github alternate big black icon"></i>
+		</a>
+	</div>
+</footer>
