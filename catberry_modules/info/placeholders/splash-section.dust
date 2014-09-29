@@ -1,0 +1,10 @@
+<section class="cb-splash">
+	<div class="cb-splash__content">
+		<div class="cb-splash__description">
+			<h1>{@l10n key="SPLASH_TITLE"/}</h1>
+			<h2>{@l10n key="SPLASH_DESC"/}</h2>
+			{html|s}
+		</div>
+		<div class="cb-splash__logo"></div>
+	</div>
+</section>

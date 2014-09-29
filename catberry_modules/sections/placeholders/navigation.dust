@@ -1,7 +1,17 @@
 <ul class="cb-navigation">
-	<li class="cb-navigation__item"><a href="/">Home</a></li>
-	<li class="cb-navigation__item"><a href="/overview">Overview</a></li>
-	<li class="cb-navigation__item"><a href="/getting-started">Getting Started</a></li>
-	<li class="cb-navigation__item"><a href="/documentation">Documentation</a></li>
-	<li class="cb-navigation__item"><a href="/packages">Packages</a></li>
+	<li class="cb-navigation__item">
+		<a href="/">{@l10n key="NAVIGATION_HOME"/}</a>
+	</li>
+	<li class="cb-navigation__item">
+		<a href="/overview">{@l10n key="NAVIGATION_OVERVIEW"/}</a>
+	</li>
+	<li class="cb-navigation__item">
+		<a href="/getting-started">{@l10n key="NAVIGATION_GETTING_STARTED"/}</a>
+	</li>
+	<li class="cb-navigation__item">
+		<a href="/documentation">{@l10n key="NAVIGATION_DOCUMENTATION"/}</a>
+	</li>
+	<li class="cb-navigation__item">
+		<a href="/packages">{@l10n key="NAVIGATION_PACKAGES"/}</a>
+	</li>
 </ul>

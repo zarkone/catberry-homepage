@@ -1,7 +1,7 @@
 <header class="cb-header">
 	<div class="cb-content">
 		<div class="cb-header__title">
-			Catberry.js
+			{@l10n key="TITLE"/}
 		</div>
 		<div class="cb-header__navigation">
 			<nav id="sections_navigation"></nav>

@@ -5,7 +5,6 @@
 </head>
 <body class="cb-body">
 {>"main__header"/}
-{>"main__splash"/}
 <div id="sections_pages"></div>
 {>"main__footer"/}
 <script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
