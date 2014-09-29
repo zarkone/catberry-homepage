@@ -5,7 +5,7 @@
 </head>
 <body class="cb-body">
 {>"main__header"/}
-<div id="sections_pages"></div>
+<div class="cb-container" id="sections_pages"></div>
 {>"main__footer"/}
 <script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
 <div id="analytics_tracking-code"></div>

@@ -87,14 +87,14 @@ InfoModule.prototype._getStaticContent = function (templateName) {
  * Renders static quotes section.
  * @returns {Promise<Object>} Promise for data context.
  */
-InfoModule.prototype.renderQuotesSection = function () {
+InfoModule.prototype.renderQuotes = function () {
 	return this._getStaticContent('quotes');
 };
 
 /**
- * Renders static splash section.
+ * Renders static widgets section.
  * @returns {Promise<Object>} Promise for data context.
  */
-InfoModule.prototype.renderSplashSection = function () {
-	return this._getStaticContent('splash');
+InfoModule.prototype.renderWidgets = function () {
+	return this._getStaticContent('widgets');
 };
