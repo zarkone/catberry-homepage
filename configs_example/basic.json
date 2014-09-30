@@ -1,7 +1,4 @@
 {
-	"githubApi": {
-		"host": "https://api.github.com"
-	},
 	"application": {
 		"host": "http://localhost:3000"
 	},

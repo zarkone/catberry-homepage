@@ -45,6 +45,8 @@ var http = require('http'),
 	cat = catberry.create(config),
 	app = connect();
 
+var cachedGithubApi = require('./lib/cachedGithubApi');
+
 config.publicPath = publicPath;
 config.isRelease = isRelease === undefined ? config.isRelease : isRelease;
 
@@ -54,6 +56,8 @@ cat.locator.register('githubApiClient', GithubApiClient, config, true);
 l10n.register(cat.locator);
 
 var localizationLoader = cat.locator.resolve('localizationLoader');
+
+app.use(cachedGithubApi(cat.locator.resolve('githubApiClient'), config));
 
 // turn on GZIP when in release mode
 if (isRelease) {
