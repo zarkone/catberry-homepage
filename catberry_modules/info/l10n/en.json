@@ -1,6 +1,6 @@
 {
 	"SPLASH_TITLE": "Catberry framework",
-	"SPLASH_DESC": "for fast and modular isomorphic&nbsp;web&nbsp;applications",
+	"SPLASH_DESC": "For fast and modular isomorphic&nbsp;web&nbsp;applications",
 
 	"FEATURE_ISOMORPHIC_TITLE": "Isomorphic",
 	"FEATURE_ISOMORPHIC_DESC": "Catberry builds browser script bundle with browserify and re-uses your node.js modules in browser",

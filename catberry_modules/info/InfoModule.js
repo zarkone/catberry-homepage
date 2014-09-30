@@ -42,24 +42,15 @@ var STATIC_INFO_FILE_TEMPLATE = '/static/info/%s.html';
 /**
  * Creates new instance of info module.
  * @param {ServiceLocator} $serviceLocator Locator to resolve dependencies.
- * @param {UHR} $uhr Universal HTTP request.
  * @param {Object} application Application configuration object.
  * @constructor
  * @extends BaseModule
  */
-function InfoModule($serviceLocator, $uhr, application) {
+function InfoModule($serviceLocator, application) {
 	BaseModule.call(this, $serviceLocator);
 
-	this._uhr = $uhr;
 	this._fileTemplate = application.host + STATIC_INFO_FILE_TEMPLATE;
 }
-
-/**
- * Current Universal HTTP Request.
- * @type {UHR}
- * @private
- */
-InfoModule.prototype._uhr = null;
 
 /**
  * Static file template
@@ -76,7 +67,7 @@ InfoModule.prototype._fileTemplate = null;
  */
 InfoModule.prototype._getStaticContent = function (templateName) {
 	var dc = this.createDataContext();
-	return this._uhr.get(util.format(this._fileTemplate, templateName), {})
+	return this.uhr.get(util.format(this._fileTemplate, templateName), {})
 		.then(function (result) {
 			dc.html = result.content || '';
 			return dc;

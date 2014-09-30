@@ -47,3 +47,21 @@ util.inherits(SectionOverviewModule, BaseModule);
 function SectionOverviewModule($serviceLocator) {
 	BaseModule.call(this, $serviceLocator);
 }
+
+/**
+ * Renders overview page.
+ * @returns {Promise<Object>} Promise for data context.
+ */
+SectionOverviewModule.prototype.renderPage = function () {
+	var dc = this.createDataContext();
+	return this.uhr.get(this.cacheGithubApiHost + '/readme', {
+			data: {
+				owner: 'catberry',
+				repo: 'catberry'
+			}
+		})
+		.then(function (result) {
+			dc.content = result.content.content || '';
+			return dc;
+		});
+};

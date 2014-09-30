@@ -1,3 +1,7 @@
 <section class="cb-content">
-	Overview
+	<h1 class="ui header">{@l10n key="NAVIGATION_OVERVIEW"/}</h1>
+	<div class="ui divider"></div>
+	<div class="cb-markdown">
+		{content|s}
+	</div>
 </section>
