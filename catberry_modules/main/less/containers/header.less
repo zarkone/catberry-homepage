@@ -11,7 +11,9 @@
 
 	color: @COLOR_HEADER;
 	background: @COLOR_HEADER_BACKGROUND;
-	box-shadow: 0 2px 2px 0 @COLOR_SHADOW, 0 1px 0 0 @COLOR_SHADOW;
+	box-shadow:
+		0 2px 2px 0 @COLOR_SHADOW,
+		0 1px 0 0 @COLOR_SHADOW;
 
 	z-index: @z-index-header;
 
@@ -20,7 +22,7 @@
 	&__title {
 		font-weight: bold;
 		font-size: @FONT_SIZE_MEDIUM;
-		.mixin-fluid-item(10%);
+		.mixin-fluid-item(15%);
 
 		& a,
 		& a:visited,
@@ -30,8 +32,8 @@
 	}
 
 	&__navigation {
-		text-align: right;
-		.mixin-fluid-item(75%);
+		text-align: center;
+		.mixin-fluid-item(70%);
 	}
 
 	&__github {
