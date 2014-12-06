@@ -30,9 +30,10 @@
 		"./configs/environment.json": "./configs/browser.json"
 	},
 	"dependencies": {
-		"catberry": "^2.0.3",
+		"catberry": "^3.2.0",
 		"catberry-l10n": "^2.0.1",
 		"catberry-lazy-loader": "^2.0.3",
+		"catberry-oauth2-client": "^1.1.0",
 		"connect": "~2.19.5",
 		"event-stream": "~3.1.5",
 		"gulp": "~3.8.5",

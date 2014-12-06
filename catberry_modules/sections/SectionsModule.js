@@ -54,6 +54,6 @@ function SectionsModule($serviceLocator) {
  */
 SectionsModule.prototype.renderPages = function () {
 	var dc = this.createDataContext();
-	dc.pageType = this.$context.state.pageType;
+	dc.section = this.$context.state.section;
 	return dc;
 };

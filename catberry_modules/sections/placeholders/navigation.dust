@@ -9,6 +9,9 @@
 		<a href="/documentation">{@l10n key="NAVIGATION_DOCUMENTATION"/}</a>
 	</li>
 	<li class="cb-navigation__item">
+		<a href="/faq">{@l10n key="NAVIGATION_FAQ"/}</a>
+	</li>
+	<li class="cb-navigation__item">
 		<a href="/packages">{@l10n key="NAVIGATION_PACKAGES"/}</a>
 	</li>
 </ul>

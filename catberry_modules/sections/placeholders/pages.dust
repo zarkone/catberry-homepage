@@ -1,23 +1,26 @@
-{@select key="{pageType}"}
-	{@eq value="main"}
-		<div class="loading--show-animation" id="main_page"
-			 data-scroll-top="true"></div>
-	{/eq}
+{@select key="{section}"}
 	{@eq value="overview"}
-		<div class="loading--show-animation" id="sectionOverview_page"
+		<div class="loading--show-animation" id="section-overview_page"
 			 data-scroll-top="true"></div>
 	{/eq}
 	{@eq value="getting-started"}
-		<div class="loading--show-animation" id="sectionGettingStarted_page"
+		<div class="loading--show-animation" id="section-getting-started_page"
 			 data-scroll-top="true"></div>
 	{/eq}
 	{@eq value="documentation"}
-		<div class="loading--show-animation" id="sectionDocumentation_page"
+		<div class="loading--show-animation" id="section-documentation_page"
+			 data-scroll-top="true"></div>
+	{/eq}
+	{@eq value="faq"}
+		<div class="loading--show-animation" id="section-faq_page"
 			 data-scroll-top="true"></div>
 	{/eq}
 	{@eq value="packages"}
-		<div class="loading--show-animation" id="sectionPackages_page"
+		<div class="loading--show-animation" id="section-packages_page"
 			 data-scroll-top="true"></div>
 	{/eq}
-	{@default}{/default}
+	{@default}
+		<div class="loading--show-animation" id="main_page"
+			 data-scroll-top="true"></div>
+	{/default}
 {/select}
