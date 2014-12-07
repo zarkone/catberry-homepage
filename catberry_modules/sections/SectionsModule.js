@@ -53,7 +53,7 @@ function SectionsModule($serviceLocator) {
  * @returns {Object} Data context.
  */
 SectionsModule.prototype.renderPages = function () {
-	var dc = this.createDataContext();
-	dc.section = this.$context.state.section;
-	return dc;
+	return this.createDataContext({
+		section: this.$context.state.section
+	});
 };

@@ -53,7 +53,7 @@ function SectionOverviewModule($serviceLocator) {
  * @returns {Promise<Object>} Promise for data context.
  */
 SectionOverviewModule.prototype.renderPage = function () {
-	var dc = this.createDataContext();
+	var self = this;
 	return this.uhr.get(this.cacheGithubApiHost + '/readme', {
 			data: {
 				owner: 'catberry',
@@ -61,7 +61,8 @@ SectionOverviewModule.prototype.renderPage = function () {
 			}
 		})
 		.then(function (result) {
-			dc.content = result.content.content || '';
-			return dc;
+			return self.createDataContext({
+				content: result.content.content || ''
+			});
 		});
 };
