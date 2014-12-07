@@ -1,5 +1,3 @@
 <section class="cb-quotes">
-	<div class="cb-content">
-		{html|s}
-	</div>
+	{html|s}
 </section>
