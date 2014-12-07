@@ -1,7 +1,7 @@
 {
 	"CARD_TITLE": "Catberry Framework",
 	"CARD_DESC": "For fast and modular isomorphic web&#8209;applications",
-	"CARD_TO_INSTALL": "Install Catberry CLI with following command",
+	"CARD_TO_INSTALL": "Install Catberry CLI with following command:",
 	"CARD_TO_CREATE_EMPTY": "Now you can create empty project like this:",
 	"CARD_TO_CREATE_EXAMPLE": "Or example application that works with GitHub API:",
 
