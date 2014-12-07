@@ -1,12 +1,12 @@
 <header class="cb-header">
-	<div class="cb-content">
-		<div class="cb-header__title">
+	<div class="ui page grid">
+		<div class="cb-header__title four wide left aligned column">
 			<a href="/">{@l10n key="TITLE"/}</a>
 		</div>
-		<div class="cb-header__navigation">
+		<div class="cb-navigation__item ten wide right aligned column">
 			<nav id="sections_navigation"></nav>
 		</div>
-		<div class="cb-header__github">
+		<div class="one wide right aligned column">
 			<iframe src="http://ghbtns.com/github-btn.html?user=catberry&repo=catberry&type=watch&count=true"
 					allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 		</div>
