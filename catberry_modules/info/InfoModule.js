@@ -48,16 +48,7 @@ var STATIC_INFO_FILE_TEMPLATE = '/static/info/%s.html';
  */
 function InfoModule($serviceLocator, application) {
 	BaseModule.call(this, $serviceLocator);
-
-	this._fileTemplate = application.host + STATIC_INFO_FILE_TEMPLATE;
 }
-
-/**
- * Static file template
- * @type {string}
- * @private
- */
-InfoModule.prototype._fileTemplate = null;
 
 /**
  * Gets static content
@@ -66,11 +57,21 @@ InfoModule.prototype._fileTemplate = null;
  * @private
  */
 InfoModule.prototype._getStaticContent = function (templateName) {
-	var dc = this.createDataContext();
-	return this.uhr.get(util.format(this._fileTemplate, templateName), {})
+	var self = this,
+		uri = this.$context.location.clone();
+
+	if (!uri.scheme) {
+		uri.scheme = 'http';
+	}
+	uri.query = null;
+	uri.fragment = null;
+	uri.path = util.format(STATIC_INFO_FILE_TEMPLATE, templateName);
+
+	return this.uhr.get(uri.toString())
 		.then(function (result) {
-			dc.html = result.content || '';
-			return dc;
+			return self.createDataContext({
+					html: result.content || ''
+				});
 		});
 };
 
@@ -80,12 +81,4 @@ InfoModule.prototype._getStaticContent = function (templateName) {
  */
 InfoModule.prototype.renderQuotes = function () {
 	return this._getStaticContent('quotes');
-};
-
-/**
- * Renders static widgets section.
- * @returns {Promise<Object>} Promise for data context.
- */
-InfoModule.prototype.renderWidgets = function () {
-	return this._getStaticContent('widgets');
 };
