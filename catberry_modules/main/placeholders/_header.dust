@@ -1,9 +1,9 @@
 <header class="cb-header">
 	<div class="ui page grid">
-		<div class="cb-header__title four wide left aligned column">
+		<div class="cb-header__title one wide left aligned column">
 			<a href="/">{@l10n key="TITLE"/}</a>
 		</div>
-		<div class="cb-navigation__item ten wide right aligned column">
+		<div class="cb-navigation__item thirteen wide right aligned column">
 			<nav id="sections_navigation"></nav>
 		</div>
 		<div class="one wide right aligned column">
