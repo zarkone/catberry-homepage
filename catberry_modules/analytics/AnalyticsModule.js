@@ -95,17 +95,19 @@ AnalyticsModule.prototype.trackEvents = function () {
 	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
+
+	var self = this;
 	// track events
 	this.$context.on('eventRouted', function (args) {
 		if (!args.isStarted) {
 			return;
 		}
-		this._window.ga(
+		self._window.ga(
 			'send',
 			'event',
 			'event',
 			args.eventName,
-			this._window.location.hash || 'empty hash'
+			self._window.location.hash || 'empty hash'
 		);
 	});
 };
@@ -117,14 +119,16 @@ AnalyticsModule.prototype.trackFormSubmitting = function () {
 	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
+
+	var self = this;
 	// track form submitting
 	this.$context.on('formSubmitted', function (args) {
-		this._window.ga(
+		self._window.ga(
 			'send',
 			'event',
 			'form',
 			'module: ' + args.moduleName + ', form: ' + args.name,
-			this._window.location.hash || 'empty hash'
+			self._window.location.hash || 'empty hash'
 		);
 	});
 };
@@ -136,9 +140,11 @@ AnalyticsModule.prototype.trackPages = function () {
 	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
+
+	var self = this;
 	// track pages
 	this.$context.on('pageRendered', function (args) {
-		this._window.ga('send', 'pageview', args.urlPath);
+		self._window.ga('send', 'pageview', args.urlPath);
 	});
 };
 
@@ -149,8 +155,10 @@ AnalyticsModule.prototype.trackErrors = function () {
 	if (typeof(this._window.ga) !== 'function') {
 		return;
 	}
+
+	var self = this;
 	// track errors
 	this.$context.on('error', function (error) {
-		this._window.ga('send', 'event', 'error', error ? error.stack : '');
+		self._window.ga('send', 'event', 'error', error ? error.stack : '');
 	});
 };
