@@ -42,11 +42,10 @@ var STATIC_INFO_FILE_TEMPLATE = '/static/info/%s.html';
 /**
  * Creates new instance of info module.
  * @param {ServiceLocator} $serviceLocator Locator to resolve dependencies.
- * @param {Object} application Application configuration object.
  * @constructor
  * @extends BaseModule
  */
-function InfoModule($serviceLocator, application) {
+function InfoModule($serviceLocator) {
 	BaseModule.call(this, $serviceLocator);
 }
 
