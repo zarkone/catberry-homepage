@@ -4,10 +4,10 @@
 	  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 </head>
 <body class="cb-body">
-{>"main__header"/}
-<div class="cb-container" id="sections_pages"></div>
-{>"main__footer"/}
-<script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
-<div id="analytics_tracking-code"></div>
+	{>"main__header"/}
+	<div class="cb-container" id="sections_pages"></div>
+	{>"main__footer"/}
+	<script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
+	<div id="analytics_tracking-code"></div>
 </body>
 </html>
