@@ -1,17 +1,15 @@
 <footer class="cb-footer">
-	<div class="cb-content">
-		<div class="ui grid two column middle aligned">
-			<div class="column">
-				<a href="https://twitter.com/catberryjs" target="_blank">
-					<i class="twitter big black icon"></i>
-				</a>
-				<a href="https://github.com/catberry/catberry" target="_blank">
-					<i class="github alternate big black icon"></i>
-				</a>
-			</div>
-			<div class="column right aligned">
-				<div>{@l10n key="COPYRIGHTS"/}</div>
-			</div>
+	<div class="ui page grid">
+		<div class="eight wide left aligned column">
+			<a href="https://twitter.com/catberryjs" target="_blank">
+				<i class="twitter big black icon"></i>
+			</a>
+			<a href="https://github.com/catberry/catberry" target="_blank">
+				<i class="github alternate big black icon"></i>
+			</a>
+		</div>
+		<div class="eight wide column right aligned">
+			<div>{@l10n key="COPYRIGHTS"/}</div>
 		</div>
 	</div>
 </footer>
