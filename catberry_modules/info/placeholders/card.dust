@@ -1,5 +1,5 @@
-<section>
-	<div class="cb-card ui page grid">
+<section class="cb-card">
+	<div class="ui page grid">
 		<div class="nine wide column">
 			<div class="row">
 				<h1>{@l10n key="CARD_TITLE"/}</h1>
