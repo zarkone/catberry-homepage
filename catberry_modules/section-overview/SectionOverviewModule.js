@@ -54,15 +54,10 @@ function SectionOverviewModule($serviceLocator) {
  */
 SectionOverviewModule.prototype.renderPage = function () {
 	var self = this;
-	return this.uhr.get(this.cacheGithubApiHost + '/readme', {
-			data: {
-				owner: 'catberry',
-				repo: 'catberry'
-			}
-		})
+	return this.gitHub.getReadme(this.$context, 'catberry', 'catberry')
 		.then(function (result) {
 			return self.createDataContext({
-				content: result.content.content || ''
+				content: result || ''
 			});
 		});
 };

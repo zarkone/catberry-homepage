@@ -1,12 +1,5 @@
 {
 	"server": {
 		"port": 3000
-	},
-	"githubApi": {
-		"host": "https://api.github.com",
-		"clientId": "XXX",
-		"clientSecret": "XXX",
-		"expiredAfterMinutes": 60
-	},
-	"unsafeHTTPS": true
+	}
 }

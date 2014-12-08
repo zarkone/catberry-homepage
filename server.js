@@ -31,7 +31,7 @@
 'use strict';
 
 var l10n = require('catberry-l10n'),
-	GithubApiClient = require('./lib/GithubApiClient'),
+	GitHubClient = require('./lib/GitHubClient'),
 	catberry = require('catberry'),
 	isRelease = process.argv.length === 3 ?
 		process.argv[2] === 'release' : undefined;
@@ -41,30 +41,22 @@ var http = require('http'),
 	publicPath = path.join(__dirname, 'public'),
 	connect = require('connect'),
 	configLoader = require('./lib/configLoader'),
-	config = configLoader.load('server'),
+	config = configLoader.load(),
 	cat = catberry.create(config),
 	app = connect();
-
-var cachedGithubApi = require('./lib/cachedGithubApi');
 
 config.publicPath = publicPath;
 config.isRelease = isRelease === undefined ? config.isRelease : isRelease;
 
-cat.locator.register('githubApiClient', GithubApiClient, config, true);
+cat.locator.register('gitHubClient', GitHubClient, config, true);
 
 // registers all localization components in locator
 l10n.register(cat.locator);
 
 var localizationLoader = cat.locator.resolve('localizationLoader');
 
-app.use(cachedGithubApi(cat.locator.resolve('githubApiClient'), config));
-
-// turn on GZIP when in release mode
-if (isRelease) {
-	app.use(connect.compress());
-}
-
 app.use(connect.static(publicPath));
+
 // sets locale to cookie and handles /l10n.js
 app.use(localizationLoader.getMiddleware());
 app.use(cat.getMiddleware());

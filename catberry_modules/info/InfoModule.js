@@ -42,12 +42,21 @@ var STATIC_INFO_FILE_TEMPLATE = '/static/info/%s.html';
 /**
  * Creates new instance of info module.
  * @param {ServiceLocator} $serviceLocator Locator to resolve dependencies.
+ * @param {UHR} $uhr UHR to make requests for static resources.
  * @constructor
  * @extends BaseModule
  */
-function InfoModule($serviceLocator) {
+function InfoModule($serviceLocator, $uhr) {
 	BaseModule.call(this, $serviceLocator);
+	this._uhr = $uhr;
 }
+
+/**
+ * Current UHR.
+ * @type {UHR}
+ * @private
+ */
+InfoModule.prototype._uhr = null;
 
 /**
  * Gets static content
@@ -66,7 +75,7 @@ InfoModule.prototype._getStaticContent = function (templateName) {
 	uri.fragment = null;
 	uri.path = util.format(STATIC_INFO_FILE_TEMPLATE, templateName);
 
-	return this.uhr.get(uri.toString())
+	return this._uhr.get(uri.toString())
 		.then(function (result) {
 			return self.createDataContext({
 					html: result.content || ''

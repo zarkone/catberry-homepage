@@ -1,9 +1,12 @@
 {
-	"application": {
-		"host": "http://localhost:3000"
+	"gitHubClient": {
+		"host": "https://api.github.com"
 	},
 	"l10n": {
-		"defaultLocale": "en"
+		"defaultLocale": "en",
+		"cookie": {
+			"path": "/"
+		}
 	},
 	"googleAnalytics": {
 		"id": "UA-XXXXXXXX-X"

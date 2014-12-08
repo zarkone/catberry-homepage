@@ -43,7 +43,6 @@ var isRelease = false,
 	fs = require('fs'),
 	svgmin = require('gulp-svgmin'),
 	less = require('gulp-less'),
-	browserSync = require('browser-sync'),
 	config = require('./configs/basic.json');
 
 var LESS_IMPORT_FORMAT = '@import "%s";',
@@ -131,10 +130,6 @@ gulp.task(TASKS.REGISTER_WATCH, [TASKS.BUILD],
 		if (isRelease) {
 			return;
 		}
-
-		browserSync({
-			proxy: config.application.host
-		});
 
 		registerWatch();
 	});
@@ -234,10 +229,6 @@ gulp.task(TASKS.PUBLISH_JOINED_STYLES, [TASKS.PROCESS_STYLES],
 
 		if (isRelease) {
 			stream = stream.pipe(minifyCSS());
-		} else {
-			stream = stream.pipe(browserSync.reload({
-				stream: true
-			}));
 		}
 
 		return stream.pipe(gulp.dest(DIRECTORIES.DESTINATION));
