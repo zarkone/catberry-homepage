@@ -47,3 +47,17 @@ util.inherits(SectionDocumentationModule, BaseModule);
 function SectionDocumentationModule($serviceLocator) {
 	BaseModule.call(this, $serviceLocator);
 }
+
+/**
+ * Renders documentation page.
+ * @returns {Promise<Object>} Promise for data context.
+ */
+SectionDocumentationModule.prototype.renderPage = function () {
+	var self = this;
+	return this.gitHub.getDocumentation(this.$context)
+		.then(function (result) {
+			return self.createDataContext({
+				content: result || ''
+			});
+		});
+};

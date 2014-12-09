@@ -1,3 +1,3 @@
-<div id="info_card"></div>
-<div id="info_features"></div>
-<div id="info_quotes"></div>
+<section id="info_card" class="catberry padded card section"></section>
+<section id="info_features" class="catberry padded features section"></section>
+<section id="info_quotes" class="catberry padded quotes section"></section>

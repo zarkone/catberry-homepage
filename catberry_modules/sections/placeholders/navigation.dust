@@ -1,17 +1,9 @@
-<ul class="cb-navigation">
-	<li class="cb-navigation__item">
-		<a href="/overview">{@l10n key="NAVIGATION_OVERVIEW"/}</a>
-	</li>
-	<li class="cb-navigation__item">
-		<a href="/getting-started">{@l10n key="NAVIGATION_GETTING_STARTED"/}</a>
-	</li>
-	<li class="cb-navigation__item">
-		<a href="/documentation">{@l10n key="NAVIGATION_DOCUMENTATION"/}</a>
-	</li>
-	<li class="cb-navigation__item">
-		<a href="/faq">{@l10n key="NAVIGATION_FAQ"/}</a>
-	</li>
-	<li class="cb-navigation__item">
-		<a href="/packages">{@l10n key="NAVIGATION_PACKAGES"/}</a>
-	</li>
-</ul>
+<a class="item" href="/overview">{@l10n key="NAVIGATION_OVERVIEW"/}</a>
+<a class="item" href="/getting-started">{@l10n key="NAVIGATION_GETTING_STARTED"/}</a>
+<a class="item" href="/documentation">{@l10n key="NAVIGATION_DOCUMENTATION"/}</a>
+<a class="item" href="/faq">{@l10n key="NAVIGATION_FAQ"/}</a>
+<a class="item" href="/packages">{@l10n key="NAVIGATION_PACKAGES"/}</a>
+<div class="vertically fitted borderless item">
+	<iframe src="http://ghbtns.com/github-btn.html?user=catberry&repo=catberry&type=watch&count=true"
+			allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+</div>

@@ -1,14 +1,12 @@
-<header class="cb-header">
-	<div class="ui page grid">
-		<div class="cb-header__title one wide left aligned column">
-			<a href="/">{@l10n key="TITLE"/}</a>
+<header>
+	<div class="ui fixed inverted menu">
+		<div class="borderless item"></div>
+		<div class="borderless title item">
+			<a 	href="/">{@l10n key="TITLE"/}</a>
 		</div>
-		<div class="cb-navigation__item thirteen wide right aligned column">
+		<div class="right menu">
 			<nav id="sections_navigation"></nav>
 		</div>
-		<div class="one wide right aligned column">
-			<iframe src="http://ghbtns.com/github-btn.html?user=catberry&repo=catberry&type=watch&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-		</div>
+		<div class="borderless item"></div>
 	</div>
 </header>

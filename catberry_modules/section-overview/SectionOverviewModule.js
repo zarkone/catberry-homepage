@@ -54,7 +54,7 @@ function SectionOverviewModule($serviceLocator) {
  */
 SectionOverviewModule.prototype.renderPage = function () {
 	var self = this;
-	return this.gitHub.getReadme(this.$context, 'catberry', 'catberry')
+	return this.gitHub.getReadme(this.$context)
 		.then(function (result) {
 			return self.createDataContext({
 				content: result || ''

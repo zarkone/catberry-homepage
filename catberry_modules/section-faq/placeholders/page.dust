@@ -1,6 +1,8 @@
-<iframe id="forum_embed"
-		src="https://groups.google.com/forum/embed/?place=forum/catberry&showsearch=true&showpopout=true&showtabs=false"
-		scrolling="no"
-		frameborder="0"
-		width="100%">
-</iframe>
+<section class="catberry padded faq section">
+	<iframe id="forum_embed"
+			src="https://groups.google.com/forum/embed/?place=forum/catberry&showsearch=true&showpopout=true&showtabs=false"
+			scrolling="no"
+			frameborder="0"
+			width="100%">
+	</iframe>
+</section>

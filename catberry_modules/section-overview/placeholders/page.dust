@@ -1,7 +1,9 @@
-<section class="cb-content">
-	<h1 class="ui header">{@l10n key="NAVIGATION_OVERVIEW"/}</h1>
-	<div class="ui divider"></div>
-	<div class="cb-markdown">
-		{content|s}
+<section class="catberry padded markdown section">
+	<div class="ui basic segment">
+		<h1 class="ui header">{@l10n key="NAVIGATION_OVERVIEW"/}</h1>
+		<div class="ui divider"></div>
+		<div>
+			{content|s}
+		</div>
 	</div>
 </section>
