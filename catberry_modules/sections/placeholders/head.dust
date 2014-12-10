@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>{@l10n key="TITLE"/}{#.subtitle} &mdash; {.}{/.subtitle}</title>
+<title>{@l10n key="TITLE"/}{#.sectionKey} / {@l10n key="{.}"/}{/.sectionKey}</title>
 <meta http-equiv="x-ua-compatible" content="edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{@l10n key="DESCRIPTION"/}">
