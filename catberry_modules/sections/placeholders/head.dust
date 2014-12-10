@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>{@l10n key="TITLE"/}</title>
+<title>{@l10n key="TITLE"/}{#.subtitle} &mdash; {.}{/.subtitle}</title>
 <meta http-equiv="x-ua-compatible" content="edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{@l10n key="DESCRIPTION"/}">
@@ -10,7 +10,17 @@
 
 <script src="/l10n.js"></script>
 <script src="/bundle.js"></script>
+
 <script src="/lib/highlight/highlight.pack.js"></script>
+<script>
+	window.hljs.configure({
+		languages: [
+			'javascript',
+			'json',
+			'html'
+		]
+	});
+</script>
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">

@@ -1,26 +1,2 @@
-{@select key="{section}"}
-	{@eq value="overview"}
-		<div class="ui basic placeholder segment" id="section-overview_page"
-			 data-scroll-top="true"></div>
-	{/eq}
-	{@eq value="getting-started"}
-		<div class="ui basic placeholder segment" id="section-getting-started_page"
-			 data-scroll-top="true"></div>
-	{/eq}
-	{@eq value="documentation"}
-		<div class="ui basic placeholder segment" id="section-documentation_page"
-			 data-scroll-top="true"></div>
-	{/eq}
-	{@eq value="faq"}
-		<div class="ui basic placeholder segment" id="section-faq_page"
-			 data-scroll-top="true"></div>
-	{/eq}
-	{@eq value="packages"}
-		<div class="ui basic placeholder segment" id="section-packages_page"
-			 data-scroll-top="true"></div>
-	{/eq}
-	{@default}
-		<div class="ui basic placeholder segment" id="main_page"
-			 data-scroll-top="true"></div>
-	{/default}
-{/select}
+<div class="ui basic placeholder segment" id="section-{#.section}{.}{:else}main{/.section}_page"
+	 data-scroll-top="true"></div>

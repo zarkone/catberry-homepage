@@ -35,6 +35,14 @@ module.exports = SectionsModule;
 var util = require('util'),
 	BaseModule = require('../../lib/BaseModule');
 
+var PAGES = {
+	overview: 'NAVIGATION_OVERVIEW',
+	'getting-started': 'NAVIGATION_GETTING_STARTED',
+	documentation: 'NAVIGATION_DOCUMENTATION',
+	faq: 'NAVIGATION_FAQ',
+	packages: 'NAVIGATION_PACKAGES'
+};
+
 util.inherits(SectionsModule, BaseModule);
 
 /**
@@ -47,6 +55,32 @@ util.inherits(SectionsModule, BaseModule);
 function SectionsModule($serviceLocator) {
 	BaseModule.call(this, $serviceLocator);
 }
+
+/**
+ * Gets data for rendering HEAD.
+ * @returns {Object} Data context.
+ */
+SectionsModule.prototype.renderHead = function () {
+	if (this.$context.state.section in PAGES) {
+		return this.createDataContext({
+			sectionKey: PAGES[this.$context.state.section]
+		});
+	}
+};
+
+/**
+ * Gets data for rendering navigation.
+ * @returns {Object} Data context.
+ */
+SectionsModule.prototype.renderNavigation = function () {
+	return Object.keys(PAGES)
+		.map(function (sectionName) {
+			return {
+				section: sectionName,
+				sectionKey: PAGES[sectionName]
+			};
+		});
+};
 
 /**
  * Renders pages placeholder.
