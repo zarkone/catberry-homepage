@@ -7,7 +7,7 @@
 	{>"main__header"/}
 	<section id="sections_pages" class="catberry section"></section>
 	{>"main__footer"/}
-	<script src="/lib/semantic-ui/packaged/javascript/semantic.min.js"></script>
+	<script src="/lib/semantic-ui/dist/semantic.min.js"></script>
 	<div id="analytics_tracking-code"></div>
 </body>
 </html>

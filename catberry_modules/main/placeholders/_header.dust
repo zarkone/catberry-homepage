@@ -1,5 +1,5 @@
 <header>
-	<div class="ui fixed inverted menu">
+	<div class="ui fixed inverted orange menu">
 		<div class="borderless item"></div>
 		<div class="borderless title item">
 			<a 	href="/">{@l10n key="TITLE"/}</a>

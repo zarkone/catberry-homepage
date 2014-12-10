@@ -61,3 +61,14 @@ SectionDocumentationModule.prototype.renderPage = function () {
 			});
 		});
 };
+
+/**
+ * Does action after page has been rendered.
+ */
+SectionDocumentationModule.prototype.afterRenderPage = function () {
+	var $ = this.locator.resolve('jQuery'),
+		window = this.locator.resolve('window');
+	$('div.highlight').each(function (i, block) {
+		window.hljs.highlightBlock(block);
+	});
+};

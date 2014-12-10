@@ -1,3 +1,5 @@
-<section id="info_card" class="catberry padded card section"></section>
-<section id="info_features" class="catberry padded features section"></section>
-<section id="info_quotes" class="catberry padded quotes section"></section>
+<section id="info_card" class="catberry padded card main section"></section>
+<div class="ui divider"></div>
+<section id="info_features" class="catberry main section"></section>
+<div class="ui divider"></div>
+<section id="info_quotes" class="catberry main section"></section>
