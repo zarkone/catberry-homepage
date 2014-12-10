@@ -50,15 +50,14 @@ config.isRelease = isRelease === undefined ? config.isRelease : isRelease;
 
 cat.locator.register('gitHubClient', GitHubClient, config, true);
 
-// registers all localization components in locator
-l10n.register(cat.locator);
-
-var localizationLoader = cat.locator.resolve('localizationLoader');
-
 app.use(connect.static(publicPath));
 
 // sets locale to cookie and handles /l10n.js
+// registers all localization components in locator
+l10n.register(cat.locator);
+var localizationLoader = cat.locator.resolve('localizationLoader');
 app.use(localizationLoader.getMiddleware());
+
 app.use(cat.getMiddleware());
 app.use(connect.errorHandler());
 http
