@@ -1,28 +1,7 @@
-
-SRC = lib/**.js \
-	catberry_modules/**.js
-
-TESTS = test/*
-
-npm-test: lint test
+npm-test: lint
 
 lint:
 	./node_modules/.bin/jshint ./ && ./node_modules/.bin/jscs ./
-
-test:
-	@echo "Running tests..."
-	@NODE_ENV=test ./node_modules/.bin/mocha \
-		$(TESTS) \
-		--bail
-
-test-cov:
-	@echo "Getting coverage report..."
-	@NODE_ENV=test node ./node_modules/.bin/istanbul cover \
-		./node_modules/.bin/_mocha \
-		--harmony-generators \
-		-- -u exports \
-		$(TESTS) \
-		--bail
 
 config:
 	cp -nR ./configs_example/ ./configs/
@@ -34,5 +13,3 @@ release:
 clean:
 	rm -rf coverage
 	./node_modules/.bin/gulp clean
-
-.PHONY: test
