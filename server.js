@@ -32,9 +32,7 @@
 
 var l10n = require('catberry-l10n'),
 	GitHubClient = require('./lib/GitHubClient'),
-	catberry = require('catberry'),
-	isRelease = process.argv.length === 3 ?
-		process.argv[2] === 'release' : undefined;
+	catberry = require('catberry');
 
 var http = require('http'),
 	path = require('path'),
@@ -46,11 +44,10 @@ var http = require('http'),
 	app = connect();
 
 config.publicPath = publicPath;
-config.isRelease = isRelease === undefined ? config.isRelease : isRelease;
 
 cat.locator.register('gitHubClient', GitHubClient, config, true);
 
-app.use(connect.static(publicPath));
+app.use('/public', connect.static(publicPath));
 
 // sets locale to cookie and handles /l10n.js
 // registers all localization components in locator

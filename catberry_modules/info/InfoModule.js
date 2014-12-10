@@ -37,7 +37,7 @@ var util = require('util'),
 
 util.inherits(InfoModule, BaseModule);
 
-var STATIC_INFO_FILE_TEMPLATE = '/static/info/%s.html';
+var STATIC_INFO_FILE_TEMPLATE = '/public/static/info/%s.html';
 
 /**
  * Creates new instance of info module.
