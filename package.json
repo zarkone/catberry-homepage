@@ -30,7 +30,7 @@
 		"./configs/environment.json": "./configs/browser.json"
 	},
 	"dependencies": {
-		"catberry": "^3.2.0",
+		"catberry": "^3.2.1",
 		"catberry-l10n": "^2.0.1",
 		"connect": "~2.19.5",
 		"event-stream": "~3.1.5",
