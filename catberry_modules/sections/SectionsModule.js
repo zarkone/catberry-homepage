@@ -37,7 +37,6 @@ var util = require('util'),
 
 var PAGES = {
 	overview: 'NAVIGATION_OVERVIEW',
-	'getting-started': 'NAVIGATION_GETTING_STARTED',
 	documentation: 'NAVIGATION_DOCUMENTATION',
 	faq: 'NAVIGATION_FAQ',
 	packages: 'NAVIGATION_PACKAGES'
