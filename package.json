@@ -1,11 +1,10 @@
 {
 	"name": "catberry-homepage",
 	"version": "0.0.1",
-	"description": "Catberry's official site. Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js",
+	"description": "Catberry's official web-site. Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js",
 	"homepage": "https://github.com/catberry/catberry-homepage",
 	"keywords": [
-		"stream", "web", "isomorphic", "framework", "middleware", "connect",
-		"dust", "module", "express"
+		"isomorphic", "catberry"
 	],
 	"bugs": {
 		"url": "https://github.com/catberry/catberry-homepage/issues",
@@ -15,14 +14,14 @@
 		"type": "git",
 		"url": "git://github.com/catberry/catberry-homepage.git"
 	},
+	"author": {
+		"name": "Julia Rechkunova",
+		"email": "julia.rechkunova@gmail.com"
+	},
 	"contributors": [
 		{
 			"name": "Denis Rechkunov",
 			"email": "denis.rechkunov@gmail.com"
-		},
-		{
-			"name": "Julia Rechkunova",
-			"email": "julia.rechkunova@gmail.com"
 		}
 	],
 	"main": "./server.js",
@@ -46,18 +45,15 @@
 		"gulp-uglify": "~0.3.0"
 	},
 	"devDependencies": {
-		"istanbul-harmony": "~0.3.0",
 		"jscs": "~1.4.0",
-		"jsdom": "~0.10.6",
-		"jshint": "^2.5.0",
-		"mocha": "^1.20.0"
+		"jshint": "^2.5.0"
 	},
 	"engines": {
 		"node": "^0.10.26"
 	},
 	"scripts": {
 		"start": "npm run release",
-		"release": "make release && node ./server.js release",
+		"release": "make release && node ./server.js",
 		"debug": "gulp watch & node ./build.js & node ./server.js",
 		"test": "make"
 	}
