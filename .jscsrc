@@ -1,6 +1,7 @@
 {
 	"excludeFiles": [
 		"./**/node_modules/**",
+		"./public/**",
 		"./coverage/**",
 		"./node_modules/**",
 		"./test/cases/**"
