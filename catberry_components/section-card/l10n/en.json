@@ -1,7 +1,8 @@
 {
 	"CARD_TITLE": "Catberry Framework",
-	"CARD_DESC": "For fast and modular isomorphic web&#8209;applications",
-	"CARD_TO_INSTALL": "Install Catberry CLI with following command:",
-	"CARD_TO_CREATE_EMPTY": "Now you can create empty project like this:",
-	"CARD_TO_CREATE_EXAMPLE": "Or example application that works with GitHub API:"
+	"CARD_DESC": "Catberry is a framework with Flux architecture,<br/>isomorphic web-components and progressive rendering",
+	"CARD_TO_INSTALL": "Install Catberry CLI using following command:",
+	"CARD_TO_CREATE_EMPTY": "Now you can create an empty project with <a href=\"http://handlebarsjs.com/\" target=\"_blank\">Handlebars</a> support like this:",
+	"CARD_TO_CREATE_EXAMPLE": "Or an example application that works using GitHub API:",
+	"CARD_TO_LIST_TEMPLATES": "Also, you can get a list of all templates:"
 }

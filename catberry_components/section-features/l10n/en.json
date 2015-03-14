@@ -1,19 +1,19 @@
 {
 	"FEATURE_ISOMORPHIC_TITLE": "Isomorphic",
-	"FEATURE_ISOMORPHIC_DESC": "Catberry builds browser script bundle with browserify and re-uses your node.js modules in browser",
+	"FEATURE_ISOMORPHIC_DESC": "Catberry builds a browser version of the application using <a href=\"http://browserify.org/\" target=\"_blank\">browserify</a> and it works as the <a href=\"http://en.wikipedia.org/wiki/Single-page_application\" target=\"_blank\">SPA</a> in a browser",
 
-	"FEATURE_SPA_TITLE": "SPA",
-	"FEATURE_SPA_DESC": "Automatically creates Single Page Application using browser History API",
+	"FEATURE_COMPONENTS_TITLE": "Cat-Components",
+	"FEATURE_COMPONENTS_DESC": "It is similar with <a href=\"http://webcomponents.org/\" target=\"_blank\">web-components by Google</a>, but they are rendered at the server as well as in a browser",
+
+	"FEATURE_FLUX_TITLE": "Flux",
+	"FEATURE_FLUX_DESC": "The framework is built using <a href=\"https://facebook.github.io/flux/\" target=\"_blank\">Flux</a> architecture. You just need to implement Stores and Cat-Components",
 
 	"FEATURE_SEO_TITLE": "SEO",
-	"FEATURE_SEO_DESC": "Back-end renders identical page for search engines and shared links",
+	"FEATURE_SEO_DESC": "Search crawler receives the full page as well as a regular user. The whole state of the application is restored from URL",
 
-	"FEATURE_FAST_TITLE": "Blazing fast",
-	"FEATURE_FAST_DESC": "Super fast rendering engine using node.js Streams API without in-memory template rendering",
+	"FEATURE_FAST_TITLE": "Fast and Efficient",
+	"FEATURE_FAST_DESC": "Server-side <a href=\"http://www.phpied.com/progressive-rendering-via-multiple-flushes/\" target=\"_blank\">progressive rendering</a> based on <a href=\"http://nodejs.org/api/stream.html#stream_api_for_stream_implementors\" target=\"_blank\">node.js streams</a> and parallel rendering of components in a browser",
 
-	"FEATURE_EASY_TITLE": "Easy to extend",
-	"FEATURE_EASY_DESC": "All framework is built using Service Locator pattern, Dependency Injection and Promises",
-
-	"FEATURE_READY_TITLE": "Production ready",
-	"FEATURE_READY_DESC": "Well-tested and already used in several public deployed applications"
+	"FEATURE_READY_TITLE": "Production-Ready",
+	"FEATURE_READY_DESC": "The framework is well-tested (code coverage is <a href=\"https://coveralls.io/r/catberry/catberry?branch=master\" target=\"_blank\">about 95%</a>) and already used in public-deployed applications"
 }
