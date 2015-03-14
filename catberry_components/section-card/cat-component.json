@@ -1,0 +1,4 @@
+{
+	"name": "section-card",
+	"template": "./template.hbs"
+}

@@ -1,0 +1,53 @@
+{
+	"name": "catberry-homepage",
+	"version": "1.0.0",
+	"description": "Catberry's official web-site. Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js",
+	"homepage": "https://github.com/catberry/catberry-homepage",
+	"keywords": [
+		"isomorphic", "catberry"
+	],
+	"bugs": {
+		"url": "https://github.com/catberry/catberry-homepage/issues",
+		"email": "julia.rechkunova@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/catberry/catberry-homepage.git"
+	},
+	"author": {
+		"name": "Julia Rechkunova",
+		"email": "julia.rechkunova@gmail.com"
+	},
+	"contributors": [
+		{
+			"name": "Denis Rechkunov",
+			"email": "denis.rechkunov@gmail.com"
+		}
+	],
+	"main": "./server.js",
+	"browser": {
+		"./configs/environment.json": "./configs/browser.json"
+	},
+	"dependencies": {
+		"catberry": "^4.6.2",
+		"catberry-handlebars": "^1.0.3",
+		"catberry-l10n": "^3.0.2",
+		"catberry-l10n-handlebars-helper": "^1.0.1",
+		"connect": "^3.3.4",
+		"errorhandler": "^1.0.0",
+		"serve-static": "^1.0.0"
+	},
+	"devDependencies": {
+		"jscs": "~1.6.2",
+		"jshint": "^2.6.0"
+	},
+	"engines": {
+		"node": "^0.10.26"
+	},
+	"scripts": {
+		"start": "npm run release",
+		"release": "make release && node ./server.js",
+		"debug": "node ./build.js & node ./server.js",
+		"test": "make"
+	}
+}

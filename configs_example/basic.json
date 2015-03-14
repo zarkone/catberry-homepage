@@ -1,0 +1,15 @@
+{
+	"gitHubClient": {
+		"host": "https://api.github.com"
+	},
+	"l10n": {
+		"defaultLocale": "en",
+		"cookie": {
+			"path": "/"
+		}
+	},
+	"googleAnalytics": {
+		"id": "UA-XXXXXXXX-X"
+	},
+	"isRelease": true
+}

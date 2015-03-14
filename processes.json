@@ -1,0 +1,13 @@
+{
+	"apps": [
+		{
+			"name": "catberry.org",
+			"script": "server.js",
+			"watch": false,
+			"instances": "4",
+			"out_file": "logs/output.log",
+			"error_file": "logs/error.log",
+			"pid_file": "worker.pid"
+		}
+	]
+}

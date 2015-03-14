@@ -1,0 +1,8 @@
+{
+	"CARD_TITLE": "Catberry Framework",
+	"CARD_DESC": "Catberry is a framework with Flux architecture,<br/>isomorphic web-components and progressive rendering",
+	"CARD_TO_INSTALL": "Install <a href=\"https://www.npmjs.com/package/catberry-cli\" target=\"_blank\">Catberry CLI</a> using following command:",
+	"CARD_TO_CREATE_EMPTY": "Now you can create an empty project with <a href=\"http://handlebarsjs.com/\" target=\"_blank\">Handlebars</a> support like this:",
+	"CARD_TO_CREATE_EXAMPLE": "Or an example application that works using GitHub API:",
+	"CARD_TO_LIST_TEMPLATES": "Also, you can get a list of all templates:"
+}
