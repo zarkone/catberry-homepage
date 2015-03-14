@@ -2,7 +2,7 @@
 coverage
 node_modules
 /public/bundle.js
-/public/assets
+/public/assets/
 .idea
 *.log
 .DS_Store
