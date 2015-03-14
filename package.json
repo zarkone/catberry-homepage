@@ -47,7 +47,7 @@
 	"scripts": {
 		"start": "npm run release",
 		"release": "make release && node ./server.js",
-		"debug": "./node_modules/.bin/gulp watch & node ./build.js & node ./server.js",
+		"debug": "node ./build.js & node ./server.js",
 		"test": "make"
 	}
 }
