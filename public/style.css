@@ -26,15 +26,10 @@ section.catberry.section {
 section.catberry.padded.section {
   padding: 80px 40px;
 }
-/*section.catberry.main.section {*/
-  /*padding-top: 40px;*/
-  /*padding-bottom: 40px;*/
-/*}*/
-/*section.catberry.main.card.section {*/
-  /*padding-top: 80px;*/
-  /*padding-left: 0;*/
-  /*padding-right: 0;*/
-/*}*/
+section.catberry.main.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 div.ui.placeholder.segment {
   min-height: 300px;
   padding: 0;
