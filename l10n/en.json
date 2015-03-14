@@ -1,6 +1,6 @@
 {
 	"TITLE": "Catberry.js &mdash; Isomorphic JavaScript Framework",
 	"DESCRIPTION": "Catberry is a framework with Flux architecture, isomorphic web-components and progressive rendering.",
-	"COPYRIGHTS": "© 2014 Denis Rechkunov",
+	"COPYRIGHTS": "© %d <a href=\"https://github.com/catberry\" target=\"_blank\">Catberry.js Team</a>",
 	"PAGE_TITLE_MAIN": "Main"
 }

@@ -50,3 +50,13 @@ util.inherits(Footer, ComponentBase);
 function Footer() {
 	ComponentBase.call(this);
 }
+
+Footer.prototype.render = function () {
+	var l10n = this.$context.locator.resolve('localizationProvider'),
+		context = this.localizeContext();
+	context.copyrightText = util.format(
+		l10n.get(context.locale, 'COPYRIGHTS'),
+		(new Date()).getFullYear()
+	);
+	return context;
+};

@@ -15,6 +15,13 @@ body {
 header {
 	height: 50px;
 }
+nav iframe {
+	margin-top: 10px;
+}
+footer a, footer a:visited, footer a:hover {
+	color: white;
+}
+
 header div.title.item {
   font-weight: bold;
   font: 1em 'PT Sans', 'Arial', sans-serif;
@@ -34,6 +41,9 @@ div.ui.placeholder.segment {
   min-height: 300px;
   padding: 0;
 }
+div.borderless.non-padded.item {
+  padding: 0;
+}
 section.markdown code {
   padding: 0.2em;
   margin: 0;
@@ -50,14 +60,10 @@ section.markdown h1 a,
 section.markdown p > a > img {
   display: none;
 }
-a {
-  color: #0096d3;
-  text-decoration: none;
-}
-a:visited {
-  color: #0096d3;
+a, a:visited {
+  color: black;
 }
 a:active,
 a:hover {
-  color: #20bfff;
+  color: rgba(0,0,0,.5);
 }
