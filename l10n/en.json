@@ -1,5 +1,6 @@
 {
 	"TITLE": "Catberry.js &mdash; Isomorphic JavaScript Framework",
-	"DESCRIPTION": "Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js.",
-	"COPYRIGHTS": "© 2014 Denis Rechkunov"
+	"DESCRIPTION": "Catberry is a framework with Flux architecture, isomorphic web-components and progressive rendering.",
+	"COPYRIGHTS": "© 2014 Denis Rechkunov",
+	"PAGE_TITLE_MAIN": "Main"
 }

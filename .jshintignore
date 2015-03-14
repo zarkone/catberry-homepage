@@ -1,5 +1,3 @@
-node_modules
 coverage
-public
-catberry_modules/*/assets
-assets
+test/cases
+node_modules

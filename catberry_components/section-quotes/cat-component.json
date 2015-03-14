@@ -1,0 +1,5 @@
+{
+	"name": "section-quotes",
+	"template": "./template.hbs",
+	"errorTemplate": "./error.hbs"
+}

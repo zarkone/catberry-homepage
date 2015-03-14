@@ -34,5 +34,5 @@
 // catberry's module-render methods.
 
 module.exports = [
-	'/:section[sections]'
+	'/:page[Pages]'
 ];

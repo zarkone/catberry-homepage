@@ -8,8 +8,7 @@ config:
 	echo "Configuration initialized in ./configs"
 
 release:
-	./node_modules/.bin/gulp release && node ./build.js release
+	node ./build.js release
 
 clean:
 	rm -rf coverage
-	./node_modules/.bin/gulp clean

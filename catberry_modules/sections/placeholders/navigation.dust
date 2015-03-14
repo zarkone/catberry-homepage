@@ -1,7 +1,0 @@
-{#.}
-	<a class="item" href="/{.section}">{@l10n key="{.sectionKey}"/}</a>
-{/.}
-<div class="vertically fitted borderless item">
-	<iframe src="http://ghbtns.com/github-btn.html?user=catberry&repo=catberry&type=watch&count=true"
-			allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-</div>

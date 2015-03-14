@@ -1,8 +1,8 @@
 /configs/
 coverage
 node_modules
-/public/
-compiled
+/public/bundle.js
+/public/assets
 .idea
 *.log
 .DS_Store

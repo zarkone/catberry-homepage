@@ -1,0 +1,19 @@
+{
+	"FEATURE_ISOMORPHIC_TITLE": "Isomorphic",
+	"FEATURE_ISOMORPHIC_DESC": "Catberry builds browser script bundle with browserify and re-uses your node.js modules in browser",
+
+	"FEATURE_SPA_TITLE": "SPA",
+	"FEATURE_SPA_DESC": "Automatically creates Single Page Application using browser History API",
+
+	"FEATURE_SEO_TITLE": "SEO",
+	"FEATURE_SEO_DESC": "Back-end renders identical page for search engines and shared links",
+
+	"FEATURE_FAST_TITLE": "Blazing fast",
+	"FEATURE_FAST_DESC": "Super fast rendering engine using node.js Streams API without in-memory template rendering",
+
+	"FEATURE_EASY_TITLE": "Easy to extend",
+	"FEATURE_EASY_DESC": "All framework is built using Service Locator pattern, Dependency Injection and Promises",
+
+	"FEATURE_READY_TITLE": "Production ready",
+	"FEATURE_READY_DESC": "Well-tested and already used in several public deployed applications"
+}

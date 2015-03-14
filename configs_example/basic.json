@@ -11,5 +11,5 @@
 	"googleAnalytics": {
 		"id": "UA-XXXXXXXX-X"
 	},
-	"isRelease": false
+	"isRelease": true
 }

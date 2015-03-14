@@ -1,0 +1,5 @@
+{
+	"name": "section-navigation",
+	"template": "./template.hbs",
+	"errorTemplate": "./error.hbs"
+}

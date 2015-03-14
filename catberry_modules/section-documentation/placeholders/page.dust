@@ -1,5 +1,0 @@
-<section class="catberry padded markdown section">
-	<div class="ui basic segment">
-		{content|s}
-	</div>
-</section>
