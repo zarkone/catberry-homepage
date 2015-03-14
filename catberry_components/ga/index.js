@@ -86,7 +86,7 @@ Ga.prototype.bind = function () {
 	this._isInitialized = true;
 	this._window = this.$context.locator.resolve('window');
 	this._window.ga('create', this._config.id || null, 'auto');
-
+	this._window.ga('send', 'pageview', this.$context.location.toString());
 	this.trackPages();
 	this.trackErrors();
 };
