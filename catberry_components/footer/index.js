@@ -51,6 +51,12 @@ function Footer() {
 	ComponentBase.call(this);
 }
 
+/**
+ * Gets data context for template engine.
+ * This method is optional.
+ * @returns {Promise<Object>|Object|null|undefined} Data context
+ * for template engine.
+ */
 Footer.prototype.render = function () {
 	var l10n = this.$context.locator.resolve('localizationProvider'),
 		context = this.localizeContext();
