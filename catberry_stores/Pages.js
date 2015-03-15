@@ -33,7 +33,8 @@
 module.exports = Pages;
 
 var ALLOWED_PAGES = {
-		main: true
+		main: true,
+		overview: true
 	},
 	DEFAULT_PAGE = 'main';
 

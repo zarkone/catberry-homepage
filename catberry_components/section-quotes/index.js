@@ -65,3 +65,8 @@ SectionQuotes.prototype.render = function () {
 			return self.localizeContext(data);
 		});
 };
+
+SectionQuotes.prototype.bind = function () {
+	var window = this.$context.locator.resolve('window');
+	window.twttr.widgets.load();
+};

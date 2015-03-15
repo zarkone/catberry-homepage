@@ -30,35 +30,25 @@
 
 'use strict';
 
-module.exports = ComponentBase;
+module.exports = Overview;
 
-var l10nHelper = require('./helpers/l10nHelper');
+var util = require('util'),
+	StaticStoreBase = require('../../lib/StaticStoreBase');
+
+util.inherits(Overview, StaticStoreBase);
+
+/*
+ * This is a Catberry Store file.
+ * More details can be found here
+ * https://github.com/catberry/catberry/blob/master/docs/index.md#stores
+ */
 
 /**
- * Creates new instance of basic component.
+ * Creates new instance of the "static/Quotes" store.
  * @constructor
  */
-function ComponentBase() {
-
+function Overview() {
+	StaticStoreBase.call(this);
 }
 
-/**
- * Gets data context for template engine.
- * This method is optional.
- * @returns {Promise<Object>|Object|null|undefined} Data context
- * for template engine.
- */
-ComponentBase.prototype.render = function () {
-	return this.localizeContext();
-};
-
-/**
- * Adds locale to any data object.
- * @param {Object?} data Optional data object.
- * @returns {Object} Data object with locale.
- */
-ComponentBase.prototype.localizeContext = function (data) {
-	data = data || {};
-	data.locale = l10nHelper.getCurrentLocale(this.$context);
-	return data;
-};
+Overview.prototype.filename = 'github/overview';

@@ -8,14 +8,15 @@ var http = require('http'),
 	util = require('util'),
 	path = require('path'),
 	publicPath = path.join(__dirname, 'public'),
-	connect = require('connect'),
+	express = require('express'),
 	configLoader = require('./lib/configLoader'),
 	config = configLoader.load(),
 	templateEngine = require('catberry-handlebars'),
 	l10n = require('catberry-l10n'),
 	localizationHelper = require('catberry-l10n-handlebars-helper'),
+	GitHubClient = require('./lib/GitHubClient'),
 	cat = catberry.create(config),
-	app = connect();
+	app = express();
 
 var READY_MESSAGE = 'Ready to handle incoming requests on port %d';
 
@@ -29,6 +30,9 @@ localizationHelper.register(cat.locator);
 
 var serveStatic = require('serve-static');
 app.use('/public', serveStatic(publicPath));
+
+var gitHubClient = cat.locator.resolveInstance(GitHubClient, config);
+app.use('/public/html/github', gitHubClient.getMiddleware());
 
 var localizationLoader = cat.locator.resolve('localizationLoader');
 app.use(localizationLoader.getMiddleware());

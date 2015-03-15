@@ -1,7 +1,4 @@
 {
-	"gitHubClient": {
-		"host": "https://api.github.com"
-	},
 	"l10n": {
 		"defaultLocale": "en",
 		"cookie": {

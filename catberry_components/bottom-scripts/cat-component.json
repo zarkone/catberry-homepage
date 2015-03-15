@@ -1,0 +1,5 @@
+{
+	"name": "bottom-scripts",
+	"template": "./template.hbs",
+	"errorTemplate": "./error.hbs"
+}
