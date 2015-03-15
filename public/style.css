@@ -11,12 +11,17 @@ a:active,
 a:hover {
 	color: rgba(0,0,0,.5);
 }
+
 header {
 	height: 50px;
 }
 header iframe.stars {
 	display: inline-block;
 	margin-top: 8px;
+}
+
+footer {
+	margin-top: 40px;
 }
 footer a, footer a:visited, footer a:hover {
 	color: white;
@@ -26,6 +31,7 @@ header div.title.item {
   font-weight: bold;
   color: #292f33;
 }
+
 section.catberry.section {
   min-height: 100%;
 }
@@ -40,6 +46,7 @@ div.ui.placeholder.segment {
 div.borderless.non-padded.item {
   padding: 0;
 }
+
 section.markdown code {
   padding: 0.2em;
   margin: 0;
@@ -50,5 +57,5 @@ section.markdown code {
 section.markdown table th,
 section.markdown table td {
   padding: 6px 13px;
-  border: 1px solid #5c6166;
+  border: 1px solid rgb(41, 47, 51);
 }
