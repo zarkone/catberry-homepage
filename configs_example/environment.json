@@ -1,4 +1,8 @@
 {
+	"gitHubClient": {
+		"host": "https://api.github.com",
+		"accessToken": "your secret token here"
+	},
 	"server": {
 		"port": 3000
 	}

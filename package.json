@@ -33,7 +33,7 @@
 		"catberry-handlebars": "^1.0.3",
 		"catberry-l10n": "^3.0.2",
 		"catberry-l10n-handlebars-helper": "^1.0.1",
-		"connect": "^3.3.4",
+		"express": "^4.12.2",
 		"errorhandler": "^1.0.0",
 		"serve-static": "^1.0.0"
 	},
