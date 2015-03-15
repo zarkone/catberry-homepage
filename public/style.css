@@ -1,15 +1,7 @@
-/*@font-face {*/
-  /*font-family: 'PT Sans';*/
-  /*src: url('/public/lib/pt-sans/PTS75F_W.eot');*/
-  /*src: url('/public/lib/pt-sans/PTS75F_W.eot?#iefix') format('embedded-opentype'), url('/public/lib/pt-sans/PTS75F_W.woff') format('woff'), url('/public/lib/pt-sans/PTS75F_W.ttf') format('truetype'), url('/public/lib/pt-sans/PTS75F_W.svg#icon') format('svg');*/
-  /*font-weight: bold;*/
-  /*font-style: normal;*/
-/*}*/
 body {
   min-width: 920px;
   height: 100%;
   background: #ffffff;
-  font: 1em 'PT Sans', 'Arial', sans-serif;
   color: #292f33;
 }
 a, a:visited {
@@ -22,17 +14,16 @@ a:hover {
 header {
 	height: 50px;
 }
-nav iframe {
-	margin-top: 10px;
+header iframe.stars {
+	display: inline-block;
+	margin-top: 8px;
 }
 footer a, footer a:visited, footer a:hover {
 	color: white;
 }
 
-
 header div.title.item {
   font-weight: bold;
-  font: 1em 'PT Sans', 'Arial', sans-serif;
   color: #292f33;
 }
 section.catberry.section {
@@ -61,7 +52,3 @@ section.markdown table td {
   padding: 6px 13px;
   border: 1px solid #5c6166;
 }
-/*section.markdown h1 a,*/
-/*section.markdown p > a > img {*/
-  /*display: none;*/
-/*}*/
