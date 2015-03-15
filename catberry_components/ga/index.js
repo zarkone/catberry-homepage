@@ -86,7 +86,7 @@ Ga.prototype.bind = function () {
 	this._isInitialized = true;
 	this._window = this.$context.locator.resolve('window');
 	this._window.ga('create', this._config.id || null, 'auto');
-	this._window.ga('send', 'pageview', this.$context.location.toString());
+	this._window.ga('send', 'pageview', getLocation(this.$context));
 	this.trackPages();
 	this.trackErrors();
 };
@@ -105,7 +105,7 @@ Ga.prototype.trackPages = function () {
 		if (event.name !== 'head') {
 			return;
 		}
-		self._window.ga('send', 'pageview', event.context.location.toString());
+		self._window.ga('send', 'pageview', getLocation(event.context));
 	});
 };
 
@@ -119,3 +119,16 @@ Ga.prototype.trackErrors = function () {
 		self._window.ga('send', 'event', 'error', error ? error.stack : '');
 	});
 };
+
+/**
+ * Gets location for analytics.
+ * @param {Object} context Component context.
+ * @returns {string} URL.
+ */
+function getLocation(context) {
+	var location = context.location.clone();
+	location.scheme = null;
+	location.authority = null;
+
+	return location.toString();
+}
