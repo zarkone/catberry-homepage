@@ -30,14 +30,12 @@
 
 'use strict';
 
-module.exports = Pages;
+module.exports = Documentation;
 
-var ALLOWED_PAGES = {
-		main: true,
-		overview: true,
-		documentation: true
-	},
-	DEFAULT_PAGE = 'main';
+var util = require('util'),
+	StaticStoreBase = require('../../lib/StaticStoreBase');
+
+util.inherits(Documentation, StaticStoreBase);
 
 /*
  * This is a Catberry Store file.
@@ -46,41 +44,11 @@ var ALLOWED_PAGES = {
  */
 
 /**
- * Creates new instance of the "Pages" store.
+ * Creates new instance of the "static/Quotes" store.
  * @constructor
  */
-function Pages() {
-
+function Documentation() {
+	StaticStoreBase.call(this);
 }
 
-/**
- * Current lifetime of data (in milliseconds) that is returned by this store.
- * @type {number} Lifetime in milliseconds.
- */
-Pages.prototype.$lifetime = 60000;
-
-/**
- * Loads data from remote source.
- * @returns {Promise<Object>|Object|null|undefined} Loaded data.
- */
-Pages.prototype.load = function () {
-	var currentPage = this.$context.state.page;
-	if (!currentPage) {
-		currentPage = DEFAULT_PAGE;
-	}
-	currentPage = currentPage.toLowerCase();
-	if (!ALLOWED_PAGES.hasOwnProperty(currentPage)) {
-		currentPage = DEFAULT_PAGE;
-	}
-
-	var activePages = {};
-	Object.keys(ALLOWED_PAGES)
-		.forEach(function (page) {
-			activePages[page] = (page === currentPage);
-		});
-
-	return {
-		currentPage: currentPage,
-		activePages: activePages
-	};
-};
+Documentation.prototype.filename = 'github/documentation';
