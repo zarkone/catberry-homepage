@@ -66,6 +66,9 @@ SectionQuotes.prototype.render = function () {
 		});
 };
 
+/**
+ * Binds events.
+ */
 SectionQuotes.prototype.bind = function () {
 	var window = this.$context.locator.resolve('window');
 	window.twttr.widgets.load();
