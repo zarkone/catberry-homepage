@@ -30,7 +30,7 @@ localizationHelper.register(cat.locator);
 
 var serveStatic = require('serve-static');
 app.use('/public', serveStatic(publicPath));
-app.use('/robots.txt', serveStatic(publicPath));
+app.use('/robots.txt', serveStatic(path.join(publicPath, 'robots.txt')));
 
 var gitHubClient = cat.locator.resolveInstance(GitHubClient, config);
 app.use('/public/html/github', gitHubClient.getMiddleware());
