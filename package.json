@@ -1,6 +1,6 @@
 {
 	"name": "catberry-homepage",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "Catberry's official web-site. Catberry is a framework for fast and modular isomorphic web-applications written in JavaScript using node.js",
 	"homepage": "https://github.com/catberry/catberry-homepage",
 	"keywords": [
