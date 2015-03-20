@@ -60,3 +60,10 @@ section.markdown table td {
   padding: 6px 13px;
   border: 1px solid rgb(41, 47, 51);
 }
+
+section.doc {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: justify;
+  font-size: 1.4em;
+}
