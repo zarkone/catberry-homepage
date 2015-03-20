@@ -44,7 +44,7 @@ util.inherits(Documentation, StaticStoreBase);
  */
 
 /**
- * Creates new instance of the "static/Quotes" store.
+ * Creates new instance of the "static/Documentation" store.
  * @constructor
  */
 function Documentation() {
